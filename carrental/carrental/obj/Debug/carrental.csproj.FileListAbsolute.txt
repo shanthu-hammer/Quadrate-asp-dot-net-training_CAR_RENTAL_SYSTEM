@@ -11,3 +11,17 @@ C:\Users\santh\Documents\internship\CarRental\carrental\carrental\obj\Debug\carr
 C:\Users\santh\Documents\internship\CarRental\carrental\carrental\obj\Debug\carrental.Main.resources
 C:\Users\santh\Documents\internship\CarRental\carrental\carrental\obj\Debug\carrental.carreg.resources
 C:\Users\santh\Documents\internship\CarRental\carrental\carrental\obj\Debug\carrental.customer.resources
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.csprojAssemblyReference.cache
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.carreg.resources
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.customer.resources
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.Form1.resources
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.Main.resources
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.Properties.Resources.resources
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.RentCalculation.resources
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.csproj.GenerateResource.cache
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.csproj.CoreCompileInputs.cache
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.exe
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\obj\Debug\carrental.pdb
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\bin\Debug\carrental.exe.config
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\bin\Debug\carrental.exe
+C:\Users\santh\Documents\internship\gitbackup\carrental\carrental\bin\Debug\carrental.pdb

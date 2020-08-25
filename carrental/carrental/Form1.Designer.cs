@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtuname = new System.Windows.Forms.TextBox();
+            this.txtpass = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtpass = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,15 +50,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label2
             // 
@@ -69,12 +61,30 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(85, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Username";
+            // 
             // txtuname
             // 
             this.txtuname.Location = new System.Drawing.Point(239, 93);
             this.txtuname.Name = "txtuname";
             this.txtuname.Size = new System.Drawing.Size(371, 20);
             this.txtuname.TabIndex = 1;
+            // 
+            // txtpass
+            // 
+            this.txtpass.Location = new System.Drawing.Point(239, 199);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
+            this.txtpass.Size = new System.Drawing.Size(371, 20);
+            this.txtpass.TabIndex = 2;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
             // button1
             // 
@@ -94,15 +104,6 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // txtpass
-            // 
-            this.txtpass.Location = new System.Drawing.Point(239, 199);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.PasswordChar = '*';
-            this.txtpass.Size = new System.Drawing.Size(371, 20);
-            this.txtpass.TabIndex = 2;
-            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
             // Form1
             // 

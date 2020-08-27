@@ -151,7 +151,8 @@ namespace carrental
             DateTime ReturnedDate = dtpreturnedime.Value;
             TimeSpan CountDays = ReturnedDate - RentedDate;
             Days = CountDays.TotalDays;
-            int time_hired=10;
+           
+            int time_hired= Convert.ToInt32(Days);
             int cost_per_hour=20;///data from table
 
             
@@ -164,7 +165,7 @@ namespace carrental
             int extra_km =0;
             int extra_km_cost=20;///Data fom table 
 
-
+            int package_cost=1500;///data from table 
 
             if (time_hired > package_time)
             {
@@ -179,8 +180,12 @@ namespace carrental
             else { 
             ///messege
             }
-
-            total_driver_cost.Text = Convert.ToInt32(1111111).ToString();
+            extra_km_charge.Text = extra_km_cost.ToString();
+            waiting_charge.Text =wait_time_cost.ToString(); 
+           float total_base_hire_charge = Convert.ToInt32(extra_km_cost + wait_time_cost+package_cost);
+            
+            base_hire_charge.Text = package_cost.ToString();
+            total_bill.Text= Convert.ToInt32(total_base_hire_charge).ToString();
         }
 
         private void longhire_calculation()

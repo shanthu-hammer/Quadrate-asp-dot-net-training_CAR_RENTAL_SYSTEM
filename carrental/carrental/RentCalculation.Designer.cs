@@ -49,11 +49,25 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.extra_km_charge = new System.Windows.Forms.TextBox();
+            this.waiting_charge = new System.Windows.Forms.TextBox();
+            this.base_hire_charge = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.base_hire_charge);
+            this.groupBox1.Controls.Add(this.waiting_charge);
+            this.groupBox1.Controls.Add(this.extra_km_charge);
             this.groupBox1.Controls.Add(this.comboBox_options);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.comboBox2);
@@ -223,7 +237,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(448, 17);
+            this.comboBox1.Location = new System.Drawing.Point(494, 50);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
@@ -231,7 +245,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(724, 20);
+            this.comboBox2.Location = new System.Drawing.Point(690, 50);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 2;
@@ -240,6 +254,63 @@
             // 
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // extra_km_charge
+            // 
+            this.extra_km_charge.Location = new System.Drawing.Point(494, 91);
+            this.extra_km_charge.Name = "extra_km_charge";
+            this.extra_km_charge.Size = new System.Drawing.Size(121, 20);
+            this.extra_km_charge.TabIndex = 18;
+            // 
+            // waiting_charge
+            // 
+            this.waiting_charge.Location = new System.Drawing.Point(494, 127);
+            this.waiting_charge.Name = "waiting_charge";
+            this.waiting_charge.Size = new System.Drawing.Size(121, 20);
+            this.waiting_charge.TabIndex = 19;
+            // 
+            // base_hire_charge
+            // 
+            this.base_hire_charge.Location = new System.Drawing.Point(494, 170);
+            this.base_hire_charge.Name = "base_hire_charge";
+            this.base_hire_charge.Size = new System.Drawing.Size(121, 20);
+            this.base_hire_charge.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(383, 173);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 13);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "base_hire_charge";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(383, 50);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Day hire packages";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(383, 130);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "waiting charge";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(383, 91);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "extra km charge";
             // 
             // RentCalculation
             // 
@@ -279,5 +350,12 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.TextBox base_hire_charge;
+        private System.Windows.Forms.TextBox waiting_charge;
+        private System.Windows.Forms.TextBox extra_km_charge;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -80,6 +80,7 @@
             this.txtavl.Name = "txtavl";
             this.txtavl.Size = new System.Drawing.Size(149, 21);
             this.txtavl.TabIndex = 5;
+            this.txtavl.SelectedIndexChanged += new System.EventHandler(this.txtavl_SelectedIndexChanged);
             // 
             // txtmodel
             // 

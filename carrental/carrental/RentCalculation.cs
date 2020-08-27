@@ -38,16 +38,19 @@ namespace carrental
         private void rent_calculate_Click(object sender, EventArgs e)
         {
            
-            int options = comboBox_options.SelectedIndex;
+         string options = comboBox_options.SelectedItem.ToString();
 
-            if (options == 1) { rent_calculation(); }
+            if (options == "Rent") {
+                rent_calculation(); }
             
-            else if (options == 2) { dayhire_calculation();  }
+            else if (options == "Day_Hire") {
+                dayhire_calculation();  }
            
-            else if(options == 3){ longhire_calculation();
+            else if(options == "Long_Hire")
+            { longhire_calculation();
              }
             else { }
-
+           
         }
 
         private void rent_calculation()
@@ -153,25 +156,37 @@ namespace carrental
 
             
             int wait_time;
-            int package_time = 24;///DataBindings fom table 
-            float wait_time_charge=0;
+            int package_time = 24;///Data fom table 
+            float wait_time_cost=0;
 
-            int hire_distance;
-            int package_distance;
+            int hire_distance=200;
+            int package_distance=100;///Data fom table 
+            int extra_km =0;
+            int extra_km_cost=20;///Data fom table 
 
 
-            if (time_hired > package_time) {
+
+            if (time_hired > package_time)
+            {
                 wait_time = time_hired - package_time;
-                wait_time_charge = wait_time * cost_per_hour;
+                wait_time_cost = wait_time * cost_per_hour;
             }
-            else if () { }
+            else if (hire_distance > package_distance)
+            {
+                extra_km = hire_distance - package_distance;
+                extra_km_cost = package_distance * extra_km_cost;
+            }
+            else { 
+            ///messege
+            }
 
-
-
+            total_driver_cost.Text = Convert.ToInt32(1111111).ToString();
         }
 
-        private void longhire_calculation() { }
-       
+        private void longhire_calculation()
+        {
+            total_driver_cost.Text = Convert.ToInt32(22222).ToString();
+        }
     }
 }
 

@@ -159,5 +159,9 @@ namespace carrental
 
         }
 
+        private void txtavl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

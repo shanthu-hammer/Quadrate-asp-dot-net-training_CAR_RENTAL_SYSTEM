@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox_options = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,13 +46,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rent_calculate = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.comboBox_options = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.comboBox_options);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -72,6 +77,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // comboBox_options
+            // 
+            this.comboBox_options.FormattingEnabled = true;
+            this.comboBox_options.Items.AddRange(new object[] {
+            "Rent",
+            "Day_Hire",
+            "Long_Hire"});
+            this.comboBox_options.Location = new System.Drawing.Point(136, 210);
+            this.comboBox_options.Name = "comboBox_options";
+            this.comboBox_options.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_options.TabIndex = 17;
             // 
             // label6
             // 
@@ -147,13 +164,12 @@
             // 
             // dtprented_date
             // 
-            this.dtprented_date.CustomFormat = "dd-MM-yyyy";
+            this.dtprented_date.CustomFormat = "dd-MM-yyyy-hh";
             this.dtprented_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtprented_date.Location = new System.Drawing.Point(136, 75);
             this.dtprented_date.Name = "dtprented_date";
             this.dtprented_date.Size = new System.Drawing.Size(200, 20);
             this.dtprented_date.TabIndex = 9;
-           
             // 
             // textBox1
             // 
@@ -204,17 +220,26 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // comboBox_options
+            // comboBox1
             // 
-            this.comboBox_options.FormattingEnabled = true;
-            this.comboBox_options.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.comboBox_options.Location = new System.Drawing.Point(136, 210);
-            this.comboBox_options.Name = "comboBox_options";
-            this.comboBox_options.Size = new System.Drawing.Size(121, 21);
-            this.comboBox_options.TabIndex = 17;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(448, 17);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(724, 20);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
             // RentCalculation
             // 
@@ -251,5 +276,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox_options;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }

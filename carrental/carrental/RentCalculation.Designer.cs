@@ -45,11 +45,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rent_calculate = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.comboBox_options = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox_options);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -74,7 +76,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(448, 218);
+            this.label6.Location = new System.Drawing.Point(57, 475);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 16;
@@ -83,7 +85,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(448, 89);
+            this.label5.Location = new System.Drawing.Point(57, 394);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 15;
@@ -100,14 +102,14 @@
             // 
             // total_driver_cost
             // 
-            this.total_driver_cost.Location = new System.Drawing.Point(535, 89);
+            this.total_driver_cost.Location = new System.Drawing.Point(136, 394);
             this.total_driver_cost.Name = "total_driver_cost";
             this.total_driver_cost.Size = new System.Drawing.Size(100, 20);
             this.total_driver_cost.TabIndex = 13;
             // 
             // total_bill
             // 
-            this.total_bill.Location = new System.Drawing.Point(535, 215);
+            this.total_bill.Location = new System.Drawing.Point(136, 475);
             this.total_bill.Name = "total_bill";
             this.total_bill.Size = new System.Drawing.Size(100, 20);
             this.total_bill.TabIndex = 12;
@@ -151,7 +153,7 @@
             this.dtprented_date.Name = "dtprented_date";
             this.dtprented_date.Size = new System.Drawing.Size(200, 20);
             this.dtprented_date.TabIndex = 9;
-            this.dtprented_date.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+           
             // 
             // textBox1
             // 
@@ -189,7 +191,7 @@
             // 
             // rent_calculate
             // 
-            this.rent_calculate.Location = new System.Drawing.Point(136, 232);
+            this.rent_calculate.Location = new System.Drawing.Point(136, 255);
             this.rent_calculate.Name = "rent_calculate";
             this.rent_calculate.Size = new System.Drawing.Size(200, 23);
             this.rent_calculate.TabIndex = 4;
@@ -201,6 +203,18 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // comboBox_options
+            // 
+            this.comboBox_options.FormattingEnabled = true;
+            this.comboBox_options.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboBox_options.Location = new System.Drawing.Point(136, 210);
+            this.comboBox_options.Name = "comboBox_options";
+            this.comboBox_options.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_options.TabIndex = 17;
             // 
             // RentCalculation
             // 
@@ -236,5 +250,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox_options;
     }
 }

@@ -18,6 +18,9 @@ namespace carrental
             InitializeComponent();
         }
         SqlConnection con = new SqlConnection("Data Source= SANTHUJAN\\TEW ; Initial Catalog= carrental; User ID = shanthu; Password= 1234567890;");
+
+        
+        
         private void RentCalculation_Load(object sender, EventArgs e)
         {
             dtprented_date.CustomFormat = "dd-MM-yyyy";
@@ -25,8 +28,29 @@ namespace carrental
             btmdriveryes.Checked = true;
 
         }
+        private void Basic_operations()
+        {
+            double Days = 0;
+            DateTime RentedDate = dtprented_date.Value;
+            DateTime ReturnedDate = dtpreturnedime.Value;
+            bool driver = btmdriveryes.Checked;
+        }
+        private void rent_calculate_Click(object sender, EventArgs e)
+        {
+           
+            int options = comboBox_options.SelectedIndex;
 
-        private void calculation()
+            if (options == 1) { rent_calculation(); }
+            
+            else if (options == 2) { dayhire_calculation();  }
+           
+            else if(options == 3){ longhire_calculation();
+             }
+            else { }
+
+        }
+
+        private void rent_calculation()
         {
 
             double Days = 0;
@@ -115,16 +139,39 @@ namespace carrental
 
 
         }
-        private void rent_calculate_Click(object sender, EventArgs e)
-        {
-            calculation();
-
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
+        private void dayhire_calculation() {
             
+
+
+            double Days = 0;
+            DateTime RentedDate = dtprented_date.Value;
+            DateTime ReturnedDate = dtpreturnedime.Value;
+            TimeSpan CountDays = ReturnedDate - RentedDate;
+            Days = CountDays.TotalDays;
+            int time_hired=10;
+            int cost_per_hour=20;///data from table
+
+            
+            int wait_time;
+            int package_time = 24;///DataBindings fom table 
+            float wait_time_charge=0;
+
+            int hire_distance;
+            int package_distance;
+
+
+            if (time_hired > package_time) {
+                wait_time = time_hired - package_time;
+                wait_time_charge = wait_time * cost_per_hour;
+            }
+            else if () { }
+
+
+
         }
+
+        private void longhire_calculation() { }
+       
     }
 }
+

@@ -53,8 +53,8 @@ namespace carrental
                 cal.driver= btmdriveryes.Checked;
                 cal.rent_calculation();
               
-                total_bill.Text = Convert.ToInt32(r).ToString();
-                total_driver_cost.Text = Convert.ToInt32(DriverCharge).ToString();
+                total_bill.Text = Convert.ToInt32(cal.rent_calculation()).ToString();
+                ///total_driver_cost.Text = Convert.ToInt32(DriverCharge).ToString();
 
             }
 
@@ -263,6 +263,9 @@ class calculation
 
         float TotalRent = 0;
 
+
+
+
         if (time_hire > 6)
         {
             if (time_hire > 30)
@@ -310,10 +313,10 @@ class calculation
 
 
         }
-        int TotRentWithDriver = Convert.ToInt32(DriverCharge + TotalRent);
+      int TotRentWithDriver = Convert.ToInt32(DriverCharge + TotalRent);
 
+       
         return TotRentWithDriver;
-        return DriverCharge;
 
 
     }

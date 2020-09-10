@@ -18,7 +18,7 @@ namespace carrental
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source= SANTHUJAN\\TEW ; Initial Catalog= carrental; User ID = shanthu; Password= 1234567890;");
+       /// SqlConnection con = new SqlConnection("Data Source= SANTHUJAN\\TEW ; Initial Catalog= carrental; User ID = shanthu; Password= 1234567890;");
 
 
 
@@ -38,201 +38,55 @@ namespace carrental
             return Days;
 
         }
+        ///public int Basic_operations_distance()
+       /// {
+          ///  int hire_distance = distance.Text;
+         ///   return distance;
+
+       /// }
         private void rent_calculate_Click(object sender, EventArgs e)
         {
 
-           
+
 
             string options = comboBox_options.SelectedItem.ToString();
             calculation cal = new calculation();
-            if (options == "Rent") {
-                ///rent_calculation()
-                cal.time_hire = Convert.ToInt32(Basic_operations());
-                cal.driver= btmdriveryes.Checked;
-                cal.rent_calculation();
-              
-               total_bill.Text = Convert.ToInt32(cal.Total()).ToString();
-               total_driver_cost.Text = Convert.ToInt32(cal.rent_calculation()).ToString();
+            if (options == "Rent")
+            {
 
+
+                cal.time_hire = Convert.ToInt32(Basic_operations());
+                cal.driver = btmdriveryes.Checked;
+                cal.rent_calculation();
+
+                total_bill.Text = Convert.ToInt32(cal.Rent_Total()).ToString();
+                total_driver_cost.Text = Convert.ToInt32(cal.rent_calculation()).ToString();
+                base_hire_charge.Text = Convert.ToInt32(cal.package_cost).ToString();
             }
 
-            else if (options == "Day_Hire") {
-                ///dayhire_calculation();
-                ///cal.dayhire_calculations();
+            else if (options == "Day_Hire")
+            {
                 calculation day_cal = new calculation();
+                day_cal.time_hire = Convert.ToInt32(Basic_operations());               
                 extra_km_charge.Text = day_cal.extraKmCost().ToString();
                 waiting_charge.Text = day_cal.WaitTimeCost().ToString();
-               /// dayhire_calculation();
 
-               /// base_hire_charge.Text = (1500).ToString();
-               total_bill.Text = Convert.ToInt32(day_cal.total_base_hire_charge_cal()).ToString();
+
+
+                total_bill.Text = Convert.ToInt32(day_cal.total_base_hire_charge_cal()).ToString();
             }
 
             else if (options == "Long_Hire")
             {
-                ///cal.longhire_calculation();
+                calculation long_cal = new calculation();
+                long_cal.time_hire = Convert.ToInt32(Basic_operations());
+                total_bill.Text = Convert.ToInt32(long_cal.total_Long_hire_charge_cal()).ToString();
+                extra_km_charge_.Text = long_cal.extraKmCost().ToString();
+                over_night_charge.Text = long_cal.DriverOverNightRate().ToString();
+              
             }
             else { MessageBox.Show("Please select on of the packages"); }
 
-        }
-        public void values_for_cal(){
-            double Days = 0;
-            DateTime RentedDate = dtprented_date.Value;
-            DateTime ReturnedDate = dtpreturnedime.Value;
-            TimeSpan CountDays = ReturnedDate - RentedDate;
-            
-            
-
-        }
-
-        private void rent_calculation()
-        {
-
-            double Days = 0;
-            DateTime RentedDate = dtprented_date.Value;
-            DateTime ReturnedDate = dtpreturnedime.Value;
-            bool driver = btmdriveryes.Checked;
-
-
-
-            TimeSpan CountDays = ReturnedDate - RentedDate;
-            Days = CountDays.TotalDays;
-            ///getting the prices 
-            var RatePerDay = 100;
-            var RatePerWeek = 600;
-            var RatePerMonth = 2900;
-
-            ///getting  the drivers price per day 
-            int driver_cost_perday;
-
-            int Weeks = 0;
-            int Months = 0;
-            int WithoutWkDays = 0;
-
-            int TotDayAmnt = 0;
-            int TotWeekAmnt = 0;
-            int TotMonthAmnt = 0;
-
-            int DriverCharge = 100;
-
-            float TotalRent = 0;
-
-            if (Days > 6)
-            {
-                if (Days > 30)
-                {
-                    Months = Convert.ToInt32(Days / 30);
-                 
-                    int CountWeeks = Convert.ToInt32(Days - (Months * 30));
-
-                    Weeks = Convert.ToInt32(CountWeeks / 7);
-                    WithoutWkDays = Convert.ToInt32(Days - (Weeks * 7) - (Months * 30));
-
-                    TotDayAmnt = WithoutWkDays * RatePerDay;
-                    TotWeekAmnt = Weeks * RatePerWeek;
-                    TotMonthAmnt = Months * RatePerMonth;
-
-                    TotalRent = TotMonthAmnt + TotWeekAmnt + TotDayAmnt;
-                }
-                else
-                {
-                    Weeks = Convert.ToInt32(Days / 7);
-                    WithoutWkDays = Convert.ToInt32(Days - (Weeks * 7));
-
-
-                    TotDayAmnt = WithoutWkDays * RatePerDay;
-                    TotWeekAmnt = Weeks * RatePerWeek;
-
-                    TotalRent = TotWeekAmnt + TotDayAmnt;
-                }
-            }
-            else
-            {
-                TotalRent = Convert.ToInt32(Days * RatePerDay);
-                TotDayAmnt = Convert.ToInt32(TotalRent);
-                WithoutWkDays = Convert.ToInt32(Days);
-               /// return TotalRent;
-            }
-            switch (driver)
-            {
-                case true:
-                    DriverCharge = Convert.ToInt32(Days * DriverCharge);
-                    break;
-                case false:
-                    break;
-                default:
-                    break;
-            }
-
-
-
-            int TotRentWithDriver = Convert.ToInt32(DriverCharge + TotalRent);
-            total_bill.Text = Convert.ToInt32(TotRentWithDriver).ToString();
-            total_driver_cost.Text = Convert.ToInt32(DriverCharge).ToString();
-
-
-
-
-        }
-        public void dayhire_calculation() {
-            
-
-
-            double Days = 0;
-            DateTime RentedDate = dtprented_date.Value;
-            DateTime ReturnedDate = dtpreturnedime.Value;
-            TimeSpan CountDays = ReturnedDate - RentedDate;
-            Days = CountDays.TotalDays;
-           
-            int time_hired= Convert.ToInt32(Days);
-            int cost_per_hour=20;///data from table
-
-            
-            int wait_time;
-            int package_time = 24;///Data fom table 
-            float wait_time_cost=0;
-
-            int hire_distance=200;
-            int package_distance=100;///Data fom table 
-            int extra_km =0;
-            int extra_km_cost=20;///Data fom table 
-
-            int package_cost=1500;///data from table 
-
-            if (time_hired <= 24)
-            {
-                if (time_hired > package_time)
-                {
-                    wait_time = time_hired - package_time;
-                    wait_time_cost = wait_time * cost_per_hour;
-                }
-                 if (hire_distance > package_distance)
-                {
-                    extra_km = hire_distance - package_distance;
-                    extra_km_cost = package_distance * extra_km_cost;
-                }
-                else
-                {
-                    ///messege
-                }
-            }
-            else {
-                longhire_calculation(); 
-            }
-            extra_km_charge.Text = extra_km_cost.ToString();
-            waiting_charge.Text =wait_time_cost.ToString(); 
-           float total_base_hire_charge = Convert.ToInt32(extra_km_cost + wait_time_cost+package_cost);
-            
-            base_hire_charge.Text = package_cost.ToString();
-            total_bill.Text= Convert.ToInt32(total_base_hire_charge).ToString();
-        }
-
-        private void longhire_calculation()
-        {
-
-
-
-           
         }
     }
 }
@@ -240,7 +94,7 @@ namespace carrental
 
 class calculation///: RentCalculation
 {
-    public int time_hire=25;
+    public int time_hire;
     public bool driver;
     public int total_DriverCharge;
     public float TotalRent;
@@ -256,9 +110,9 @@ class calculation///: RentCalculation
 
 
 
-    /// <summary>
-    ///  below  variables for day hire
-    /// </summary>
+
+    ///  followed by variables for day and long hire
+
 
 
 
@@ -267,7 +121,8 @@ class calculation///: RentCalculation
     public int package_time = 24;///Data fom table 
     public int wait_time_cost;
 
-    int hire_distance = 200;
+    int hire_distance = 200;/// make it accept value from form
+    
     int package_distance = 100;///Data fom table 
     int extra_km = 0;
     public int extra_km_cost = 20;///Data fom table 
@@ -275,9 +130,12 @@ class calculation///: RentCalculation
     public int package_cost = 1500;///data from table 
 
     int cost_per_hour = 20;
-   
-    public float[] balance = new float[10];
 
+    public float[] balance = new float[10];
+    int Driver_Over_NightRate;
+    int Total_Over_Nights;
+    int Per_night_Rate;
+    int total_Long_hire_charge;
 
 
     ///getting the prices 
@@ -370,13 +228,12 @@ class calculation///: RentCalculation
 
 
     }
-    public int Total()
+    public int Rent_Total()
     {
         TotRentWithDriver = Convert.ToInt32(total_DriverCharge + TotalRent);
 
-
         return TotRentWithDriver;
-    }
+        }
 
 
 
@@ -414,27 +271,34 @@ class calculation///: RentCalculation
         else
         {
             extra_km_cost = 0;
-           
+
         }
 
         return extra_km_cost;
     }
 
-    public float total_base_hire_charge_cal( )///gives total bill for DAYHIRE 
+    public float total_base_hire_charge_cal()///gives total bill for DAYHIRE 
     {
-       
-           total_base_hire_charge = Convert.ToInt32(extra_km_cost + wait_time_cost + package_cost);
+
+        total_base_hire_charge = Convert.ToInt32(extra_km_cost + wait_time_cost + package_cost);
         return total_base_hire_charge;
     }
 
-   
 
-   
-    public void longhire_calculation()
+    // Following code is for calculating LONG HIRE 
+
+    public int DriverOverNightRate()
+    {
+        Total_Over_Nights = time_hire / 24;
+        Driver_Over_NightRate = Total_Over_Nights * Per_night_Rate;
+        return Driver_Over_NightRate;
+    }
+
+    public float total_Long_hire_charge_cal()///gives total bill for DAYHIRE 
     {
 
+        total_Long_hire_charge = Convert.ToInt32(extra_km_cost + Driver_Over_NightRate + package_cost);
+        return total_Long_hire_charge;
     }
-    
-
 
 }

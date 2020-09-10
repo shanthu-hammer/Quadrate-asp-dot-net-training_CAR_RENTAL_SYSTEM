@@ -30,6 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.distance = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.over_night_charge = new System.Windows.Forms.TextBox();
+            this.extra_km_charge_ = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,6 +70,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.distance);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.over_night_charge);
+            this.groupBox1.Controls.Add(this.extra_km_charge_);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -91,6 +109,79 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 277);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Distance Travelled ";
+            // 
+            // distance
+            // 
+            this.distance.Location = new System.Drawing.Point(136, 280);
+            this.distance.Name = "distance";
+            this.distance.Size = new System.Drawing.Size(200, 20);
+            this.distance.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(637, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(101, 13);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "Long hire packages";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(637, 170);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(86, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "base hire charge";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(637, 130);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 13);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "over night charge";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(637, 82);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "extra km charge";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(748, 170);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(121, 20);
+            this.textBox4.TabIndex = 28;
+            // 
+            // over_night_charge
+            // 
+            this.over_night_charge.Location = new System.Drawing.Point(748, 127);
+            this.over_night_charge.Name = "over_night_charge";
+            this.over_night_charge.Size = new System.Drawing.Size(121, 20);
+            this.over_night_charge.TabIndex = 27;
+            // 
+            // extra_km_charge_
+            // 
+            this.extra_km_charge_.Location = new System.Drawing.Point(748, 84);
+            this.extra_km_charge_.Name = "extra_km_charge_";
+            this.extra_km_charge_.Size = new System.Drawing.Size(121, 20);
+            this.extra_km_charge_.TabIndex = 26;
             // 
             // label10
             // 
@@ -124,9 +215,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(383, 173);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
+            this.label7.Size = new System.Drawing.Size(86, 13);
             this.label7.TabIndex = 21;
-            this.label7.Text = "base_hire_charge";
+            this.label7.Text = "base hire charge";
             // 
             // base_hire_charge
             // 
@@ -172,7 +263,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(690, 50);
+            this.comboBox2.Location = new System.Drawing.Point(748, 50);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 2;
@@ -180,7 +271,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 475);
+            this.label6.Location = new System.Drawing.Point(424, 280);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 16;
@@ -189,7 +280,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 394);
+            this.label5.Location = new System.Drawing.Point(420, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 15;
@@ -206,16 +297,16 @@
             // 
             // total_driver_cost
             // 
-            this.total_driver_cost.Location = new System.Drawing.Point(136, 394);
+            this.total_driver_cost.Location = new System.Drawing.Point(542, 215);
             this.total_driver_cost.Name = "total_driver_cost";
-            this.total_driver_cost.Size = new System.Drawing.Size(100, 20);
+            this.total_driver_cost.Size = new System.Drawing.Size(265, 20);
             this.total_driver_cost.TabIndex = 13;
             // 
             // total_bill
             // 
-            this.total_bill.Location = new System.Drawing.Point(136, 475);
+            this.total_bill.Location = new System.Drawing.Point(542, 277);
             this.total_bill.Name = "total_bill";
-            this.total_bill.Size = new System.Drawing.Size(100, 20);
+            this.total_bill.Size = new System.Drawing.Size(265, 20);
             this.total_bill.TabIndex = 12;
             // 
             // radioButton2
@@ -294,7 +385,7 @@
             // 
             // rent_calculate
             // 
-            this.rent_calculate.Location = new System.Drawing.Point(136, 255);
+            this.rent_calculate.Location = new System.Drawing.Point(136, 347);
             this.rent_calculate.Name = "rent_calculate";
             this.rent_calculate.Size = new System.Drawing.Size(200, 23);
             this.rent_calculate.TabIndex = 4;
@@ -346,7 +437,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox_options;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
@@ -357,5 +447,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox over_night_charge;
+        private System.Windows.Forms.TextBox extra_km_charge_;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox distance;
+        private System.Windows.Forms.ComboBox comboBox_options;
     }
 }

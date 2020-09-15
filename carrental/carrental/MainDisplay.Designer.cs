@@ -1,6 +1,6 @@
 ﻿namespace carrental
 {
-    partial class RentCalculation
+    partial class MainDisplay
     {
         /// <summary>
         /// Required designer variable.

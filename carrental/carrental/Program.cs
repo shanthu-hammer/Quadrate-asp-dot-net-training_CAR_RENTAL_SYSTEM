@@ -17,7 +17,7 @@ namespace carrental
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             ///Application.Run(new Main());
-            Application.Run(new RentCalculation());
+            Application.Run(new MainDisplay());
         }
     }
 }

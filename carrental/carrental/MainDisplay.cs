@@ -39,23 +39,24 @@ namespace carrental
             return Days;
 
         }
-        ///public int Basic_operations_distance()
-       /// {
-          ///  int hire_distance = distance.Text;
-         ///   return distance;
+        public int Basic_operations_distance()
+        {
+           
+            int hireDistance = int.Parse(distance.Text);
+            return hireDistance;
 
-       /// }
+        }
         private void rent_calculate_Click(object sender, EventArgs e)
         {
 
 
 
             string options = comboBox_options.SelectedItem.ToString();
-            Rent cal = new Rent();
+            
             if (options == "Rent")
             {
 
-
+                Rent cal = new Rent();
                 cal.time_hire = Convert.ToInt32(Basic_operations());
                 cal.driver = btmdriveryes.Checked;
                 cal.rent_calculation();
@@ -67,7 +68,10 @@ namespace carrental
 
             else if (options == "Day_Hire")
             {
+              
                 Day_Hire day_cal = new Day_Hire();
+              
+                day_cal.hire_distance= Convert.ToInt32(Basic_operations_distance());
                 day_cal.time_hire = Convert.ToInt32(Basic_operations());               
                 extra_km_charge.Text = day_cal.extraKmCost().ToString();
                waiting_charge.Text = day_cal.WaitTimeCost().ToString();
@@ -80,6 +84,7 @@ namespace carrental
             else if (options == "Long_Hire")
             {
                 Day_Hire long_cal = new Day_Hire();
+                long_cal.hire_distance = Convert.ToInt32(Basic_operations_distance());
                 long_cal.time_hire = Convert.ToInt32(Basic_operations());
                 total_bill.Text = Convert.ToInt32(long_cal.total_Long_hire_charge_cal()).ToString();
                 extra_km_charge_.Text = long_cal.extraKmCost().ToString();

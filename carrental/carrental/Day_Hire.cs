@@ -13,17 +13,18 @@ namespace carrental
         public int package_time = 24;///Data fom table 
         public int wait_time_cost;
 
-        int hire_distance = 200;/// make it accept value from form
+        public int hire_distance;/// make it accept value from formhire_distance
 
         int package_distance = 100;///Data fom table 
-        int extra_km = 0;
-        public int extra_km_cost = 20;///Data fom table 
+        int extra_km;
+        public int extra_km_cost;///Data fom table 
+        int km_cost=20;
 
         public int package_cost = 1500;///data from table 
 
         int cost_per_hour = 20;
 
-        public float[] balance = new float[10];
+       /// public float[] balance = new float[10];
         int Driver_Over_NightRate;
         int Total_Over_Nights;
         int Per_night_Rate;
@@ -51,16 +52,16 @@ namespace carrental
             if (hire_distance > package_distance)
             {
                 extra_km = hire_distance - package_distance;
-                extra_km_cost = package_distance * extra_km_cost;
+                extra_km_cost = extra_km * km_cost;
                 /// return 
                 /// testc= extra_km_cost;
                 ///balance[1] = package_distance * extra_km_cost;
                 return extra_km_cost;
             }
-            else
+            else if (hire_distance<= package_distance)
             {
                 extra_km_cost = 0;
-
+                return extra_km_cost;
             }
 
             return extra_km_cost;
@@ -69,7 +70,7 @@ namespace carrental
         public float total_base_hire_charge_cal()///gives total bill for DAYHIRE 
         {
 
-            total_base_hire_charge = Convert.ToInt32(extra_km_cost + wait_time_cost + package_cost);
+            total_base_hire_charge = Convert.ToInt32(wait_time_cost + extra_km_cost + package_cost);
             return total_base_hire_charge;
         }
 
@@ -86,7 +87,8 @@ namespace carrental
         public float total_Long_hire_charge_cal()///gives total bill for DAYHIRE 
         {
 
-            total_Long_hire_charge = Convert.ToInt32(extra_km_cost + Driver_Over_NightRate + package_cost);
+            ///total_Long_hire_charge = Convert.ToInt32(extra_km_cost + Driver_Over_NightRate + package_cost); extraKmCost()
+            total_Long_hire_charge = Convert.ToInt32(extraKmCost() + DriverOverNightRate() + package_cost); 
             return total_Long_hire_charge;
         }
 

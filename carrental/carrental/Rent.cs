@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace carrental
 {
     class Rent
     {
-        
+        int Selected_vec_cost;
+        public int vec_Charge_;
             public int time_hire;
             public bool driver;
             public int total_DriverCharge;
@@ -22,21 +24,7 @@ namespace carrental
             int Weeks = 0;
             int Months = 0;
             int WithoutWkDays = 0;
-
-
-
-
-            ///  followed by variables for day and long hire
-
-
-
-
-
-
-            ///getting the prices 
-
-        
-
+           
             // Following code is for calculating RENT
             public float rent_calculation()
             {
@@ -51,16 +39,12 @@ namespace carrental
                     if (time_hire > 30)
                     {
                         Months = Convert.ToInt32(time_hire / 30);
-
                         int CountWeeks = Convert.ToInt32(time_hire - (Months * 30));
-
-                        Weeks = Convert.ToInt32(CountWeeks / 7);
+                         Weeks = Convert.ToInt32(CountWeeks / 7);
                         WithoutWkDays = Convert.ToInt32(time_hire - (Weeks * 7) - (Months * 30));
-
                         TotDayAmnt = WithoutWkDays * RatePerDay;
                         TotWeekAmnt = Weeks * RatePerWeek;
                         TotMonthAmnt = Months * RatePerMonth;
-
                         TotalRent = TotMonthAmnt + TotWeekAmnt + TotDayAmnt;
                         return TotalRent;
                         ///
@@ -70,10 +54,10 @@ namespace carrental
                         Weeks = Convert.ToInt32(time_hire / 7);
                         WithoutWkDays = Convert.ToInt32(time_hire - (Weeks * 7));
 
-
+                    //int select_vec_charg = vec_Charge_ * time_hire;
                         TotDayAmnt = WithoutWkDays * RatePerDay;
                         TotWeekAmnt = Weeks * RatePerWeek;
-
+                        
                         TotalRent = TotWeekAmnt + TotDayAmnt;
                         return TotalRent;
                     }
@@ -86,31 +70,37 @@ namespace carrental
 
                 }
 
-                switch (driver)
-                {
-                    case true:
-                        total_DriverCharge = Convert.ToInt32(time_hire * DriverCharge);
-                        return total_DriverCharge;
-                        break;
-                    case false:
-                        total_DriverCharge = 0;
-                        return total_DriverCharge;
-                        break;
-                    default:
-                        break;
-
-                }
-                return total_DriverCharge;
-                /// int TotRentWithDriver = Convert.ToInt32(DriverCharge + TotalRent);
+            return TotalRent;              
             }
+        public int drivercost()
+        {
+            switch (driver)
+            {
+                case true:
+                    total_DriverCharge = Convert.ToInt32(time_hire * DriverCharge);
+                    return total_DriverCharge;
+                    break;
+                case false:
+                    total_DriverCharge = 0;
+                    return total_DriverCharge;
+                    break;
+                default:
+                    break;
+
+            }
+            total_DriverCharge = time_hire * DriverCharge;
+            return total_DriverCharge;
+        }
+        public int ToTvechicle() {
+            /// vec_cost Vech = new vec_cost(time_hire,vec_Charge_;);
+            int Selected_vec_cost = time_hire * vec_Charge_;
+            return Selected_vec_cost;
+        }
             public int Rent_Total()
             {
-                TotRentWithDriver = Convert.ToInt32(total_DriverCharge + TotalRent);
-
+                TotRentWithDriver = Convert.ToInt32(drivercost() + rent_calculation() + ToTvechicle());
                 return TotRentWithDriver;
-            }
-            // Following code is for calculating DAY HIRE      
-
-        }
+            }         
+       }
     }
 

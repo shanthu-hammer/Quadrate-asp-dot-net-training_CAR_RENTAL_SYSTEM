@@ -39,3 +39,8 @@ C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\c
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.exe
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.pdb
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.MainDisplay.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\EntityFramework.dll
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\EntityFramework.xml
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.csproj.CopyComplete

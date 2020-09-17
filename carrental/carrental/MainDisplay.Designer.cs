@@ -58,18 +58,21 @@
             this.btmdriveryes = new System.Windows.Forms.RadioButton();
             this.dtpreturnedime = new System.Windows.Forms.DateTimePicker();
             this.dtprented_date = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rent_calculate = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.vec_button = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.vec_button);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.distance);
             this.groupBox1.Controls.Add(this.label15);
@@ -98,7 +101,6 @@
             this.groupBox1.Controls.Add(this.btmdriveryes);
             this.groupBox1.Controls.Add(this.dtpreturnedime);
             this.groupBox1.Controls.Add(this.dtprented_date);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -349,13 +351,6 @@
             this.dtprented_date.Size = new System.Drawing.Size(200, 20);
             this.dtprented_date.TabIndex = 9;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(136, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -403,13 +398,34 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // RentCalculation
+            // vec_button
+            // 
+            this.vec_button.FormattingEnabled = true;
+            this.vec_button.Items.AddRange(new object[] {
+            "Toyato CHR",
+            "Tata INNOVA",
+            "Alto 800"});
+            this.vec_button.Location = new System.Drawing.Point(136, 20);
+            this.vec_button.Name = "vec_button";
+            this.vec_button.Size = new System.Drawing.Size(200, 21);
+            this.vec_button.TabIndex = 35;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(16, 213);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(103, 13);
+            this.label16.TabIndex = 36;
+            this.label16.Text = "select your package";
+            // 
+            // MainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 531);
             this.Controls.Add(this.groupBox1);
-            this.Name = "RentCalculation";
+            this.Name = "MainDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RentCalculation";
             this.Load += new System.EventHandler(this.RentCalculation_Load);
@@ -426,7 +442,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpreturnedime;
         private System.Windows.Forms.DateTimePicker dtprented_date;
@@ -457,5 +472,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox distance;
         private System.Windows.Forms.ComboBox comboBox_options;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox vec_button;
     }
 }

@@ -33,7 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,7 +60,7 @@
       <DependentUpon>carreg.cs</DependentUpon>
     </Compile>
     <Compile Include="Rent.cs" />
-    <Compile Include="Day_Hire.cs" />
+    <Compile Include="Hire.cs" />
     <Compile Include="customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +87,8 @@
     <Compile Include="MainDisplay.Designer.cs">
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vechicle.cs" />
+    <Compile Include="vec_cost.cs" />
     <EmbeddedResource Include="carreg.resx">
       <DependentUpon>carreg.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +113,7 @@
     <EmbeddedResource Include="MainDisplay.resx">
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

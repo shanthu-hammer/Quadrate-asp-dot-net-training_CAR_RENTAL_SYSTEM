@@ -26,30 +26,40 @@ namespace carrental
            
             btmdriveryes.Checked = true;
         }
-
+  
         public int Vehicle_option()
-        {
-         
+        {         
             string selected_vec = vec_button.SelectedItem.ToString();
             Vechicle vec = new Vechicle(selected_vec);
             int vecChargePerhour = vec.calc_vec();
             return vecChargePerhour;
         }
-    public double Basic_operations()
+        public int Basic_operations()
         {
             DateTime RentedDate = dtprented_date.Value;
             DateTime ReturnedDate = dtpreturnedime.Value;
             TimeSpan CountDays = ReturnedDate - RentedDate;
             double Days = CountDays.TotalDays;
-            return Days;
-           
+           int days_ = Convert.ToInt32(Days);
+            return days_;           
         }
         public int Basic_operations_distance()
-        {
-           
+        {           
             int hireDistance = int.Parse(distance.Text);
             return hireDistance;
-
+        }
+        public int Basic_operations_hirepack() {
+            string H_Pack=day_hirepackages.SelectedItem.ToString();
+            Day_package Hipac = new Day_package(H_Pack);
+            int max_dist = Hipac.Max_km;
+            return max_dist;
+        }
+        public int Basic_operations_Longhirepack()
+        {
+            string LH_Pack = long_hirepackages.SelectedItem.ToString();
+            Day_package Hipac = new Day_package(LH_Pack);
+            int max_dist = Hipac.Max_km;
+            return max_dist;
         }
         private void rent_calculate_Click(object sender, EventArgs e)
         {
@@ -59,12 +69,11 @@ namespace carrental
             {
                 Rent cal = new Rent();
                 cal.time_hire = Convert.ToInt32(Basic_operations());
-                cal.driver = btmdriveryes.Checked;
-               /// cal.rent_calculation();
+                cal.driver = btmdriveryes.Checked;                      ///cal.rent_calculation();
                 cal.vec_Charge_ = Vehicle_option();
                 total_bill.Text = Convert.ToInt32(cal.Rent_Total()).ToString();
                 total_driver_cost.Text = Convert.ToInt32(cal.drivercost()).ToString();
-                ///base_hire_charge.Text = Convert.ToInt32(cal.package_cost).ToString();
+               
             }
 
             else if (options == "Day_Hire")
@@ -75,6 +84,7 @@ namespace carrental
                 day_cal.hire_distance= Convert.ToInt32(Basic_operations_distance());
                 day_cal.time_hire = Convert.ToInt32(Basic_operations());
                 day_cal.vec_Charge_ = Vehicle_option();
+                day_cal.package_distance = Basic_operations_hirepack();
                 extra_km_charge.Text = day_cal.extraKmCost().ToString();
                waiting_charge.Text = day_cal.WaitTimeCost().ToString();
                 base_hire_charge.Text = Convert.ToInt32(day_cal.package_cost).ToString();
@@ -86,6 +96,7 @@ namespace carrental
                 Hire long_cal = new Hire();
                 long_cal.hire_distance = Convert.ToInt32(Basic_operations_distance());
                 long_cal.time_hire = Convert.ToInt32(Basic_operations());
+                long_cal.package_distance = Basic_operations_Longhirepack();
                 total_bill.Text = Convert.ToInt32(long_cal.total_Long_hire_charge_cal()).ToString();
                 extra_km_charge_.Text = long_cal.extraKmCost().ToString();
                 over_night_charge.Text = long_cal.DriverOverNightRate().ToString();              

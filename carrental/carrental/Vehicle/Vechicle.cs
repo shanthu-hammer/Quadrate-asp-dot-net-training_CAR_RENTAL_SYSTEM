@@ -14,9 +14,7 @@ namespace carrental
          selected_vec_ = selected_vec;
 
         }
-        public int calc_vec(){
-
-        //int vec_Charge;
+        public int calc_vec(){    
        if(selected_vec_== "Toyato CHR"){
                 vec_Charge = 300;
        return vec_Charge;}
@@ -32,23 +30,7 @@ namespace carrental
             }
                    return vec_Charge;
        }
-        //switch (selected_vec_)
-                  
-        //                case "Toyato CHR":
-        //                    vec_Charge=300
-        //                    return vec_Charge;
-        //                    break;
-        //                case "Tata INNOVA":
-        //                  vec_Charge=350
-        //                   return vec_Charge;
-        //                    break;
-        //               case "Alto 800":
-        //                  vec_Charge=400
-        //                    return vec_Charge;
-        //                    break;
-        //                default:
-        //                    break;
-
+   
     }
 }
 

@@ -11,27 +11,28 @@ namespace carrental
     {
         int Selected_vec_cost;
         public int vec_Charge_;
-            public int time_hire;
-            public bool driver;
-            public int total_DriverCharge;
-            public float TotalRent;
-            public int TotRentWithDriver;
-            int DriverCharge = 100;
-            int TotDayAmnt;
-            int TotWeekAmnt;
-            int TotMonthAmnt;
+        public int time_hire;
+        public bool driver;
+        public int total_DriverCharge;
+        public float TotalRent;
+        public int TotRentWithDriver;
+        int DriverCharge = 100;
+        int TotDayAmnt;
+        int TotWeekAmnt;
+        int TotMonthAmnt;
 
-            int Weeks = 0;
-            int Months = 0;
-            int WithoutWkDays = 0;
-           
-            // Following code is for calculating RENT
-            public float rent_calculation()
-            {
-                int RatePerDay = 100;
+        int Weeks = 0;
+        int Months = 0;
+        int WithoutWkDays = 0;
+
+        //public Rent(int Days){}
+       
+            public float rent_calculation()  // Following code is for calculating RENT
+        {
+                int RatePerDay = 100; ///getting  the drivers price per day 
                 int RatePerWeek = 600;
                 int RatePerMonth = 2900;
-                ///getting  the drivers price per day 
+               
                 int driver_cost_perday;
 
                 if (time_hire > 6)
@@ -67,9 +68,7 @@ namespace carrental
                     TotalRent = Convert.ToInt32(time_hire * RatePerDay);
                     TotDayAmnt = Convert.ToInt32(TotalRent);
                     WithoutWkDays = Convert.ToInt32(time_hire);
-
                 }
-
             return TotalRent;              
             }
         public int drivercost()

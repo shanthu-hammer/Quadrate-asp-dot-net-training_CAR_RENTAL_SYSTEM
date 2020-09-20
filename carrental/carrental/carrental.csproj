@@ -59,8 +59,20 @@
     <Compile Include="carreg.Designer.cs">
       <DependentUpon>carreg.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\DayPackage.cs" />
+    <Compile Include="DataModel\LongHire.cs" />
+    <Compile Include="DataModel\Model.cs" />
+    <Compile Include="DataModel\Packages.cs" />
+    <Compile Include="DataModel\vehicle.cs" />
+    <Compile Include="Day_package.cs" />
+    <Compile Include="Hire\LongHire.cs" />
+    <Compile Include="Migrations\202009201541227_vehicle.cs" />
+    <Compile Include="Migrations\202009201541227_vehicle.Designer.cs">
+      <DependentUpon>202009201541227_vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Rent.cs" />
-    <Compile Include="Hire.cs" />
+    <Compile Include="Hire\Hire.cs" />
     <Compile Include="customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,8 +99,7 @@
     <Compile Include="MainDisplay.Designer.cs">
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vechicle.cs" />
-    <Compile Include="vec_cost.cs" />
+    <Compile Include="Vehicle\Vechicle.cs" />
     <EmbeddedResource Include="carreg.resx">
       <DependentUpon>carreg.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201541227_vehicle.resx">
+      <DependentUpon>202009201541227_vehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainDisplay\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

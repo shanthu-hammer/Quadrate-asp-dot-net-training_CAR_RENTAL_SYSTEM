@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace carrental
+namespace carrental.DataModel
 {
-    class vec_cost
+    class Packages
     {
     }
 }

@@ -47,8 +47,8 @@
             this.waiting_charge = new System.Windows.Forms.TextBox();
             this.extra_km_charge = new System.Windows.Forms.TextBox();
             this.comboBox_options = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.day_hirepackages = new System.Windows.Forms.ComboBox();
+            this.long_hirepackages = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,8 +90,8 @@
             this.groupBox1.Controls.Add(this.waiting_charge);
             this.groupBox1.Controls.Add(this.extra_km_charge);
             this.groupBox1.Controls.Add(this.comboBox_options);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.day_hirepackages);
+            this.groupBox1.Controls.Add(this.long_hirepackages);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -254,21 +254,31 @@
             this.comboBox_options.Size = new System.Drawing.Size(121, 21);
             this.comboBox_options.TabIndex = 17;
             // 
-            // comboBox1
+            // day_hirepackages
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(494, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.day_hirepackages.FormattingEnabled = true;
+            this.day_hirepackages.Items.AddRange(new object[] {
+            "Airport",
+            "Postoffice",
+            "Town",
+            "Colombo"});
+            this.day_hirepackages.Location = new System.Drawing.Point(494, 50);
+            this.day_hirepackages.Name = "day_hirepackages";
+            this.day_hirepackages.Size = new System.Drawing.Size(121, 21);
+            this.day_hirepackages.TabIndex = 1;
             // 
-            // comboBox2
+            // long_hirepackages
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(748, 50);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 2;
+            this.long_hirepackages.FormattingEnabled = true;
+            this.long_hirepackages.Items.AddRange(new object[] {
+            "ooty",
+            "kodaikanal",
+            "Batti",
+            "Jaffna"});
+            this.long_hirepackages.Location = new System.Drawing.Point(748, 50);
+            this.long_hirepackages.Name = "long_hirepackages";
+            this.long_hirepackages.Size = new System.Drawing.Size(121, 21);
+            this.long_hirepackages.TabIndex = 2;
             // 
             // label6
             // 
@@ -452,8 +462,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox day_hirepackages;
+        private System.Windows.Forms.ComboBox long_hirepackages;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.TextBox base_hire_charge;
         private System.Windows.Forms.TextBox waiting_charge;

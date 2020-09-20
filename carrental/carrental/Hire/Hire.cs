@@ -15,7 +15,7 @@ namespace carrental
 
         public int hire_distance;/// make it accept value from formhire_distance
 
-        int package_distance = 100;///Data fom table 
+        public int package_distance;///Data fom table 
         int extra_km;
         public int extra_km_cost;///Data fom table 
         int km_cost=20;
@@ -26,10 +26,11 @@ namespace carrental
 
        /// public float[] balance = new float[10];
         int Driver_Over_NightRate;
-        int Total_Over_Nights;
-        int Per_night_Rate;
+       public int Total_Over_Nights;
+        int Per_night_Rate=20;
         int total_Long_hire_charge;
         float total_base_hire_charge;
+       /// public Hire() { }
         public int WaitTimeCost()
         {
             if (time_hire > package_time)

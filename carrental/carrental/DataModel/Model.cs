@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 
 namespace carrental.DataModel
 {
-    class Model : DbContext
+  class Model : DbContext
     {
+        internal static readonly object vehicle;
 
         public Model() : base("con") { }
             public DbSet<vehicle> vehicles { get; set; }
             //public DbSet<Rent> Rents { get; set; }
            /// public DbSet<Driver> Drivers { get; set; }
-          ///  public DbSet<LongHire> LongHire { get; set; }
-           /// public DbSet<DayPackage> DayPackage { get; set; }
+         public DbSet<basicCharges> basicCharges { get; set; }
+       public DbSet<DayPackage> DayPackage { get; set; }
           /// public DbSet<LongHire> LongHires { get; set; }
             ///public DbSet<User> Users { get; set; }
         

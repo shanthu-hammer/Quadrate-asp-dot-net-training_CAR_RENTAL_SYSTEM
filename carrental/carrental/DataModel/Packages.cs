@@ -8,5 +8,6 @@ namespace carrental.DataModel
 {
     class Packages
     {
+
     }
 }

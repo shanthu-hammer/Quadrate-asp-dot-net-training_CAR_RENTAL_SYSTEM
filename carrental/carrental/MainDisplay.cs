@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
+using carrental.DataModel;
+using System.Data.Entity;
 ///using ForCalculation;
 
 namespace carrental
@@ -61,12 +63,29 @@ namespace carrental
             int max_dist = Hipac.Max_km;
             return max_dist;
         }
+        //public void addingdata() {
+        //    vehicle data = new vehicle();
+
+        //    ///var Model = new DatabaseEntities();
+        //    Model modelInstance = new Model();
+        //    ///.vehicle///.AddObject(TableEntityInstance);
+            
+        //    data.VehicleName = "innova";
+        //    data.RatePerhour = 100;
+        //    data.RatePerNightPark = 25;
+        //    //this.Model.vehicle.AddObject(vehicle);
+        //    /// Model.vehicles.Add(data);
+        //    modelInstance.vehicles.Add(data);
+        //    modelInstance.SaveChanges();
+            
+        //}
         private void rent_calculate_Click(object sender, EventArgs e)
         {
             string options = comboBox_options.SelectedItem.ToString();
             
             if (options == "Rent")
             {
+              
                 Rent cal = new Rent();
                 cal.time_hire = Convert.ToInt32(Basic_operations());
                 cal.driver = btmdriveryes.Checked;                      ///cal.rent_calculation();
@@ -102,7 +121,40 @@ namespace carrental
                 over_night_charge.Text = long_cal.DriverOverNightRate().ToString();              
             }
             else { MessageBox.Show("Please select on of the packages"); }
+        
+        
+        
         }
+
+        private void addingbtn_Click(object sender, EventArgs e)
+        {
+        
+           
+                vehicle data = new vehicle();
+
+                ///var Model = new DatabaseEntities();
+                Model modelInstance = new Model();
+            ///.vehicle///.AddObject(TableEntityInstance);
+
+            //data.VehicleName = "innova";
+            //data.RatePerhour = 100;
+            //data.RatePerNightPark = 25;
+            ////this.Model.vehicle.AddObject(vehicle);
+            ///// Model.vehicles.Add(data);
+            //modelInstance.vehicles.Add(data);
+            //modelInstance.SaveChanges();
+            Model mod = new Model();
+            var da = new vehicle { VehicleId = 2 };
+            mod.Entry(da).State = EntityState.Deleted;
+            mod.SaveChanges();
+
+
+        }
+
+        //    private void distance_TextChanged(object sender, EventArgs e)
+        //    {
+
+        //    }
     }
 }
 

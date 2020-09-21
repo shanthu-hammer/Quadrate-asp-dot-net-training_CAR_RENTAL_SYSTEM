@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using carrental;
 
+
 namespace carrental.DataModel
 {
    public class vehicle
@@ -17,7 +18,7 @@ namespace carrental.DataModel
       //  [Required]
         public string VehicleName { get; set; }
        // [Required]
-        public int RatePerDay { get; set; }
+        public int RatePerhour { get; set; }
        // [Required]
         public int RatePerWeek { get; set; }
        // [Required]

@@ -60,7 +60,7 @@
       <DependentUpon>carreg.cs</DependentUpon>
     </Compile>
     <Compile Include="DataModel\DayPackage.cs" />
-    <Compile Include="DataModel\LongHire.cs" />
+    <Compile Include="DataModel\basicCharges.cs" />
     <Compile Include="DataModel\Model.cs" />
     <Compile Include="DataModel\Packages.cs" />
     <Compile Include="DataModel\vehicle.cs" />
@@ -69,6 +69,26 @@
     <Compile Include="Migrations\202009201541227_vehicle.cs" />
     <Compile Include="Migrations\202009201541227_vehicle.Designer.cs">
       <DependentUpon>202009201541227_vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009201742577_BasicCharges.cs" />
+    <Compile Include="Migrations\202009201742577_BasicCharges.Designer.cs">
+      <DependentUpon>202009201742577_BasicCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009201852031_Daypackage.cs" />
+    <Compile Include="Migrations\202009201852031_Daypackage.Designer.cs">
+      <DependentUpon>202009201852031_Daypackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009201854047_Daypackage1.cs" />
+    <Compile Include="Migrations\202009201854047_Daypackage1.Designer.cs">
+      <DependentUpon>202009201854047_Daypackage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009210254123_addingvalues.cs" />
+    <Compile Include="Migrations\202009210254123_addingvalues.Designer.cs">
+      <DependentUpon>202009210254123_addingvalues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009211656503_daypackages.cs" />
+    <Compile Include="Migrations\202009211656503_daypackages.Designer.cs">
+      <DependentUpon>202009211656503_daypackages.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Rent.cs" />
@@ -99,6 +119,18 @@
     <Compile Include="MainDisplay.Designer.cs">
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="emponly\emponly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="emponly\emponly.Designer.cs">
+      <DependentUpon>emponly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="packages\packages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="packages\packages.Designer.cs">
+      <DependentUpon>packages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehicle\Vechicle.cs" />
     <EmbeddedResource Include="carreg.resx">
       <DependentUpon>carreg.cs</DependentUpon>
@@ -115,6 +147,21 @@
     <EmbeddedResource Include="Migrations\202009201541227_vehicle.resx">
       <DependentUpon>202009201541227_vehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201742577_BasicCharges.resx">
+      <DependentUpon>202009201742577_BasicCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201852031_Daypackage.resx">
+      <DependentUpon>202009201852031_Daypackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009201854047_Daypackage1.resx">
+      <DependentUpon>202009201854047_Daypackage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009210254123_addingvalues.resx">
+      <DependentUpon>202009210254123_addingvalues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009211656503_daypackages.resx">
+      <DependentUpon>202009211656503_daypackages.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +173,12 @@
     </Compile>
     <EmbeddedResource Include="MainDisplay.resx">
       <DependentUpon>MainDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emponly\emponly.resx">
+      <DependentUpon>emponly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="packages\packages.resx">
+      <DependentUpon>packages.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

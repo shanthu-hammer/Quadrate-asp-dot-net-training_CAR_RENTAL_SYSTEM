@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.addingbtn = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.vec_button = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.distance = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -64,13 +67,12 @@
             this.rent_calculate = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.vec_button = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.addingbtn);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.vec_button);
             this.groupBox1.Controls.Add(this.label11);
@@ -112,6 +114,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // addingbtn
+            // 
+            this.addingbtn.Location = new System.Drawing.Point(594, 424);
+            this.addingbtn.Name = "addingbtn";
+            this.addingbtn.Size = new System.Drawing.Size(200, 23);
+            this.addingbtn.TabIndex = 37;
+            this.addingbtn.Text = "Submit";
+            this.addingbtn.UseVisualStyleBackColor = true;
+            this.addingbtn.Click += new System.EventHandler(this.addingbtn_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(16, 213);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(103, 13);
+            this.label16.TabIndex = 36;
+            this.label16.Text = "select your package";
+            // 
+            // vec_button
+            // 
+            this.vec_button.FormattingEnabled = true;
+            this.vec_button.Items.AddRange(new object[] {
+            "Toyato CHR",
+            "Tata INNOVA",
+            "Alto 800"});
+            this.vec_button.Location = new System.Drawing.Point(136, 20);
+            this.vec_button.Name = "vec_button";
+            this.vec_button.Size = new System.Drawing.Size(200, 21);
+            this.vec_button.TabIndex = 35;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -127,6 +160,7 @@
             this.distance.Name = "distance";
             this.distance.Size = new System.Drawing.Size(200, 20);
             this.distance.TabIndex = 33;
+           /// this.distance.TextChanged += new System.EventHandler(this.distance_TextChanged);
             // 
             // label15
             // 
@@ -408,27 +442,6 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // vec_button
-            // 
-            this.vec_button.FormattingEnabled = true;
-            this.vec_button.Items.AddRange(new object[] {
-            "Toyato CHR",
-            "Tata INNOVA",
-            "Alto 800"});
-            this.vec_button.Location = new System.Drawing.Point(136, 20);
-            this.vec_button.Name = "vec_button";
-            this.vec_button.Size = new System.Drawing.Size(200, 21);
-            this.vec_button.TabIndex = 35;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(16, 213);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(103, 13);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "select your package";
-            // 
             // MainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,5 +497,6 @@
         private System.Windows.Forms.ComboBox comboBox_options;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox vec_button;
+        private System.Windows.Forms.Button addingbtn;
     }
 }

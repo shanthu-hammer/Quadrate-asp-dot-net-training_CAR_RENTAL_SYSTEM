@@ -45,3 +45,10 @@ C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\E
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.csproj.CopyComplete
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.vehicle.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.BasicCharges.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.Daypackage.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.Daypackage1.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.emponly.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.addingvalues.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.UserControl1.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.daypackages.resources

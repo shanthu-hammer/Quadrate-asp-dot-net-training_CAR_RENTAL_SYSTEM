@@ -34,9 +34,9 @@ namespace carrental
             if (uname == "admin" && pass == "123")
             {
 
-                Main m = new Main();
-                this.Hide();
-                m.Show();
+                //Main m = new Main();
+                //this.Hide();
+                //m.Show();
             }
             else 
             { MessageBox.Show("Please enter a valid username ");

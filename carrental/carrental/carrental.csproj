@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basecharge\BASICCHARGE_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basecharge\BASICCHARGE_EDIT.Designer.cs">
+      <DependentUpon>BASICCHARGE_EDIT.cs</DependentUpon>
+    </Compile>
     <Compile Include="carreg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,10 +70,16 @@
     <Compile Include="DataModel\Model.cs" />
     <Compile Include="DataModel\Packages.cs" />
     <Compile Include="DataModel\vehicle.cs" />
-    <Compile Include="EDIT_VECHICLE.cs">
+    <Compile Include="DISTRIBUOR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EDIT_VECHICLE.Designer.cs">
+    <Compile Include="DISTRIBUOR.Designer.cs">
+      <DependentUpon>DISTRIBUOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\EDIT_VECHICLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle\EDIT_VECHICLE.Designer.cs">
       <DependentUpon>EDIT_VECHICLE.cs</DependentUpon>
     </Compile>
     <Compile Include="packages\Day_package.cs" />
@@ -131,11 +143,17 @@
       <DependentUpon>emponly.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehicle\Vechicle.cs" />
+    <EmbeddedResource Include="Basecharge\BASICCHARGE_EDIT.resx">
+      <DependentUpon>BASICCHARGE_EDIT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="carreg.resx">
       <DependentUpon>carreg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="customer.resx">
       <DependentUpon>customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DISTRIBUOR.resx">
+      <DependentUpon>DISTRIBUOR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -175,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="emponly\emponly.resx">
       <DependentUpon>emponly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\EDIT_VECHICLE.resx">
+      <DependentUpon>EDIT_VECHICLE.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addingbtn = new System.Windows.Forms.Button();
+            this.DISTRI_BTN = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.vec_button = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.addingbtn);
+            this.groupBox1.Controls.Add(this.DISTRI_BTN);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.vec_button);
             this.groupBox1.Controls.Add(this.label11);
@@ -114,15 +114,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // addingbtn
+            // DISTRI_BTN
             // 
-            this.addingbtn.Location = new System.Drawing.Point(594, 424);
-            this.addingbtn.Name = "addingbtn";
-            this.addingbtn.Size = new System.Drawing.Size(200, 23);
-            this.addingbtn.TabIndex = 37;
-            this.addingbtn.Text = "Submit";
-            this.addingbtn.UseVisualStyleBackColor = true;
-            this.addingbtn.Click += new System.EventHandler(this.addingbtn_Click);
+            this.DISTRI_BTN.Location = new System.Drawing.Point(594, 424);
+            this.DISTRI_BTN.Name = "DISTRI_BTN";
+            this.DISTRI_BTN.Size = new System.Drawing.Size(200, 23);
+            this.DISTRI_BTN.TabIndex = 37;
+            this.DISTRI_BTN.Text = "EDIT DATA";
+            this.DISTRI_BTN.UseVisualStyleBackColor = true;
+            this.DISTRI_BTN.Click += new System.EventHandler(this.addingbtn_Click);
             // 
             // label16
             // 
@@ -160,7 +160,6 @@
             this.distance.Name = "distance";
             this.distance.Size = new System.Drawing.Size(200, 20);
             this.distance.TabIndex = 33;
-           /// this.distance.TextChanged += new System.EventHandler(this.distance_TextChanged);
             // 
             // label15
             // 
@@ -497,6 +496,6 @@
         private System.Windows.Forms.ComboBox comboBox_options;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox vec_button;
-        private System.Windows.Forms.Button addingbtn;
+        private System.Windows.Forms.Button DISTRI_BTN;
     }
 }

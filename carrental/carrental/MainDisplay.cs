@@ -120,46 +120,16 @@ namespace carrental
                 extra_km_charge_.Text = long_cal.extraKmCost().ToString();
                 over_night_charge.Text = long_cal.DriverOverNightRate().ToString();              
             }
-            else { MessageBox.Show("Please select on of the packages"); }
-        
-        
+            else { MessageBox.Show("Please select on of the packages"); }             
         
         }
 
         private void addingbtn_Click(object sender, EventArgs e)
         {
-
-
-            
-            EDIT f2 = new EDIT(); //this is the change, code for redirect  
-            f2.ShowDialog();
-            
-
-            ///  vehicle data = new vehicle();
-
-            ///var Model = new DatabaseEntities();
-            ///   Model modelInstance = new Model();
-            ///.vehicle///.AddObject(TableEntityInstance);
-
-            //data.VehicleName = "innova";
-            //data.RatePerhour = 100;
-            //data.RatePerNightPark = 25;
-            ////this.Model.vehicle.AddObject(vehicle);
-            ///// Model.vehicles.Add(data);
-            //modelInstance.vehicles.Add(data);
-            //modelInstance.SaveChanges();
-            //Model mod = new Model();
-            //var da = new vehicle { VehicleId = 2 };
-            //mod.Entry(da).State = EntityState.Deleted;
-            //mod.SaveChanges();
-
-
+            DISTRIBUOR f2 = new DISTRIBUOR(); //this is the change, code for redirect  
+            f2.ShowDialog();                             
         }
 
-        //    private void distance_TextChanged(object sender, EventArgs e)
-        //    {
-
-        //    }
     }
 }
 

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Nightpar_vec = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.ygujygu = new System.Windows.Forms.Label();
             this.Ratehr_vec = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ygujygu = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Nightpar_vec = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,22 +59,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.Location = new System.Drawing.Point(117, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.textBox1.Location = new System.Drawing.Point(239, 59);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
             // 
-            // Nightpar_vec
+            // button3
             // 
-            this.Nightpar_vec.Location = new System.Drawing.Point(239, 185);
-            this.Nightpar_vec.Name = "Nightpar_vec";
-            this.Nightpar_vec.Size = new System.Drawing.Size(100, 20);
-            this.Nightpar_vec.TabIndex = 3;
+            this.button3.Location = new System.Drawing.Point(0, 267);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "BACK";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(239, 267);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "DELETE";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ygujygu
+            // 
+            this.ygujygu.AutoSize = true;
+            this.ygujygu.Location = new System.Drawing.Point(48, 66);
+            this.ygujygu.Name = "ygujygu";
+            this.ygujygu.Size = new System.Drawing.Size(33, 13);
+            this.ygujygu.TabIndex = 3;
+            this.ygujygu.Text = "name";
             // 
             // Ratehr_vec
             // 
@@ -101,40 +119,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "over night rate";
             // 
-            // ygujygu
+            // Nightpar_vec
             // 
-            this.ygujygu.AutoSize = true;
-            this.ygujygu.Location = new System.Drawing.Point(48, 66);
-            this.ygujygu.Name = "ygujygu";
-            this.ygujygu.Size = new System.Drawing.Size(33, 13);
-            this.ygujygu.TabIndex = 3;
-            this.ygujygu.Text = "name";
+            this.Nightpar_vec.Location = new System.Drawing.Point(239, 185);
+            this.Nightpar_vec.Name = "Nightpar_vec";
+            this.Nightpar_vec.Size = new System.Drawing.Size(100, 20);
+            this.Nightpar_vec.TabIndex = 3;
             // 
-            // button2
+            // button1
             // 
-            this.button2.Location = new System.Drawing.Point(239, 267);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "DELETE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(0, 267);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "BACK";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(239, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.button1.Location = new System.Drawing.Point(117, 267);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "ADD";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // emponly
             // 

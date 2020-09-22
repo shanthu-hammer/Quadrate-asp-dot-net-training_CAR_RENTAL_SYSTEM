@@ -34,7 +34,7 @@ namespace carrental
             P.Pcost = int.Parse(Package_Cost.Text);//getting value from textbox
 
 
-            MP.DayPackage.Add(P);
+            MP.DayPackages.Add(P);
             MP.SaveChanges();
             int res = MP.SaveChanges();
 

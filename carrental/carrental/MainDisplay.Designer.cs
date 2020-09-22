@@ -137,9 +137,10 @@
             // 
             this.vec_button.FormattingEnabled = true;
             this.vec_button.Items.AddRange(new object[] {
-            "Toyato CHR",
-            "Tata INNOVA",
-            "Alto 800"});
+            "ToyatoCHR",
+            "TataINNOVA",
+            "Alto 800",
+            "idica"});
             this.vec_button.Location = new System.Drawing.Point(136, 20);
             this.vec_button.Name = "vec_button";
             this.vec_button.Size = new System.Drawing.Size(200, 21);
@@ -304,9 +305,9 @@
             // 
             this.long_hirepackages.FormattingEnabled = true;
             this.long_hirepackages.Items.AddRange(new object[] {
+            "Batti",
             "ooty",
             "kodaikanal",
-            "Batti",
             "Jaffna"});
             this.long_hirepackages.Location = new System.Drawing.Point(748, 50);
             this.long_hirepackages.Name = "long_hirepackages";

@@ -69,7 +69,7 @@
       <DependentUpon>carreg.cs</DependentUpon>
     </Compile>
     <Compile Include="DataModel\DayPackage.cs" />
-    <Compile Include="DataModel\basicCharges.cs" />
+    <Compile Include="DataModel\basicCharge.cs" />
     <Compile Include="DataModel\Model.cs" />
     <Compile Include="DataModel\Packages.cs" />
     <Compile Include="DataModel\vehicle.cs" />
@@ -78,6 +78,38 @@
     </Compile>
     <Compile Include="DISTRIBUOR.Designer.cs">
       <DependentUpon>DISTRIBUOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221451464_test1.cs" />
+    <Compile Include="Migrations\202009221451464_test1.Designer.cs">
+      <DependentUpon>202009221451464_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221456562_changingToPublic.cs" />
+    <Compile Include="Migrations\202009221456562_changingToPublic.Designer.cs">
+      <DependentUpon>202009221456562_changingToPublic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221504065_changingToPublicccc.cs" />
+    <Compile Include="Migrations\202009221504065_changingToPublicccc.Designer.cs">
+      <DependentUpon>202009221504065_changingToPublicccc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221513323_checkForVech.cs" />
+    <Compile Include="Migrations\202009221513323_checkForVech.Designer.cs">
+      <DependentUpon>202009221513323_checkForVech.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221519381_updateonrangeformodelss.cs" />
+    <Compile Include="Migrations\202009221519381_updateonrangeformodelss.Designer.cs">
+      <DependentUpon>202009221519381_updateonrangeformodelss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221520124_Addingreadonly.cs" />
+    <Compile Include="Migrations\202009221520124_Addingreadonly.Designer.cs">
+      <DependentUpon>202009221520124_Addingreadonly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221540171_Addingreadonly1.cs" />
+    <Compile Include="Migrations\202009221540171_Addingreadonly1.Designer.cs">
+      <DependentUpon>202009221540171_Addingreadonly1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009221541065_removeingreadonly.cs" />
+    <Compile Include="Migrations\202009221541065_removeingreadonly.Designer.cs">
+      <DependentUpon>202009221541065_removeingreadonly.cs</DependentUpon>
     </Compile>
     <Compile Include="program.cs" />
     <Compile Include="Vehicle\EDIT_VECHICLE.cs">
@@ -93,7 +125,7 @@
     <Compile Include="packages\PACKAGES_EDIT.Designer.cs">
       <DependentUpon>PACKAGES_EDIT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hire\LongHire.cs" />
+    <Compile Include="packages\LongHire.cs" />
     <Compile Include="Migrations\202009201541227_vehicle.cs" />
     <Compile Include="Migrations\202009201541227_vehicle.Designer.cs">
       <DependentUpon>202009201541227_vehicle.cs</DependentUpon>
@@ -161,6 +193,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221451464_test1.resx">
+      <DependentUpon>202009221451464_test1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221456562_changingToPublic.resx">
+      <DependentUpon>202009221456562_changingToPublic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221504065_changingToPublicccc.resx">
+      <DependentUpon>202009221504065_changingToPublicccc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221513323_checkForVech.resx">
+      <DependentUpon>202009221513323_checkForVech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221519381_updateonrangeformodelss.resx">
+      <DependentUpon>202009221519381_updateonrangeformodelss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221520124_Addingreadonly.resx">
+      <DependentUpon>202009221520124_Addingreadonly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221540171_Addingreadonly1.resx">
+      <DependentUpon>202009221540171_Addingreadonly1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009221541065_removeingreadonly.resx">
+      <DependentUpon>202009221541065_removeingreadonly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="packages\PACKAGES_EDIT.resx">
       <DependentUpon>PACKAGES_EDIT.cs</DependentUpon>

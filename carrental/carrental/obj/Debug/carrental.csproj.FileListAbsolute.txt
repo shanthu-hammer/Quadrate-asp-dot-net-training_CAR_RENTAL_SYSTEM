@@ -54,3 +54,11 @@ C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\c
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\carrental.exe.config
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\bin\Debug\carrental.exe
 C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.exe
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.test1.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.changingToPublic.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.changingToPublicccc.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.checkForVech.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.updateonrangeformodelss.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.Addingreadonly.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.Addingreadonly1.resources
+C:\Users\santh\Documents\internship\carental_new\carrental\carrental\obj\Debug\carrental.Migrations.removeingreadonly.resources

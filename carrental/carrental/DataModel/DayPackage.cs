@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 namespace carrental.DataModel
 {
-    class DayPackage
+    public class DayPackage
     {
         [Key]       
         public int PackageId { get; set; }

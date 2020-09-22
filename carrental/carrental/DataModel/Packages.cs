@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace carrental.DataModel
 {
-    class Packages
+    public class Packages
     {
 
     }

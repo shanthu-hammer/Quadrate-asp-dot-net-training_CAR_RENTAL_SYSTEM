@@ -21,6 +21,7 @@ namespace carrental
 
         private void button6_Click(object sender, EventArgs e)
         {
+         
             vehicle data = new vehicle();
 
             ///var Model = new DatabaseEntities();
@@ -33,7 +34,7 @@ namespace carrental
 
 
             modelInstance.vehicles.Add(data);
-            modelInstance.SaveChanges();
+            ///modelInstance.SaveChanges();
             int res = modelInstance.SaveChanges();
 
             if (res > 0)

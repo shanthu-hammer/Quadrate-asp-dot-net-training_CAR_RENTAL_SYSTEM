@@ -23,20 +23,12 @@ namespace carrental
          selected_vec_ = selected_vec;
 
         }
-        public int calc_vec(){    
-       if(selected_vec_== "Toyato CHR"){
-                vec_Charge = 300;
-       return vec_Charge;}
-            else if (selected_vec_ == "Tata INNOVA")
-            {
-                vec_Charge = 350;
-                return vec_Charge;
-            }
-            else if (selected_vec_ == "Alto 800")
-            {
-                vec_Charge = 400;
-                return vec_Charge;
-            }
+        public int calc_vec(){
+            Model VC = new Model();
+
+            var vec_Charge = (from vehicle in VC.vehicles
+                                where vehicle.VehicleName == selected_vec_
+                                select vehicle.RatePerhour).FirstOrDefault();   
                    return vec_Charge;
        }
    

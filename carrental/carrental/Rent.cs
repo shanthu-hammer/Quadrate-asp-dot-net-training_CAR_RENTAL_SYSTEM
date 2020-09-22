@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using carrental.DataModel;
+using carrental.DataModel;
+using System.Data.Entity;
 namespace carrental
+
 {
     class Rent
     {
+       
+        Model dbbb = new Model();
         int Selected_vec_cost;
         public int vec_Charge_;
         public int time_hire;
@@ -16,20 +21,33 @@ namespace carrental
         public int total_DriverCharge;
         public float TotalRent;
         public int TotRentWithDriver;
-        int DriverCharge = 100;
+        int DriverCharge;
+        //var daaa = (from basicCharge in dbbb.basicCharges
+        //            where basicCharge.StdChrgId == 1
+        //            select basicCharge.DriverCharge).FirstOrDefault();
+
+
+        //Model.basicCharge.Where(basicCharge.StdChrgId == "1")
+
+
+
+
         int TotDayAmnt;
         int TotWeekAmnt;
         int TotMonthAmnt;
-
+       
         int Weeks = 0;
         int Months = 0;
         int WithoutWkDays = 0;
 
         //public Rent(int Days){}
        
-            public float rent_calculation()  // Following code is for calculating RENT
+            public float rent_calculation() 
+            // Following code is for calculating RENT
         {
-                int RatePerDay = 100; ///getting  the drivers price per day 
+            
+            
+            int RatePerDay = 100; ///getting  the drivers price per day 
                 int RatePerWeek = 600;
                 int RatePerMonth = 2900;
                
@@ -73,6 +91,11 @@ namespace carrental
             }
         public int drivercost()
         {
+            var DriverCharge = (from basicCharge in dbbb.basicCharges
+                        where basicCharge.StdChrgId == 1
+                        select basicCharge.DriverCharge).FirstOrDefault();
+          //  DriverCharge = daaa;
+
             switch (driver)
             {
                 case true:

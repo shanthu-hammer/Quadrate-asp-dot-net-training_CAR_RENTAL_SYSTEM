@@ -56,29 +56,14 @@ namespace carrental
             int max_dist = Hipac.Max_km;
             return max_dist;
         }
-        public int Basic_operations_Longhirepack()
-        {
-            string LH_Pack = long_hirepackages.SelectedItem.ToString();
-            Day_package Hipac = new Day_package(LH_Pack);
-            int max_dist = Hipac.Max_km;
-            return max_dist;
-        }
-        //public void addingdata() {
-        //    vehicle data = new vehicle();
-
-        //    ///var Model = new DatabaseEntities();
-        //    Model modelInstance = new Model();
-        //    ///.vehicle///.AddObject(TableEntityInstance);
-            
-        //    data.VehicleName = "innova";
-        //    data.RatePerhour = 100;
-        //    data.RatePerNightPark = 25;
-        //    //this.Model.vehicle.AddObject(vehicle);
-        //    /// Model.vehicles.Add(data);
-        //    modelInstance.vehicles.Add(data);
-        //    modelInstance.SaveChanges();
-            
+        //public int Basic_operations_Longhirepack()
+        //{
+        //    string LH_Pack = long_hirepackages.SelectedItem.ToString();
+        //    Day_package Hipac = new Day_package(LH_Pack);
+        //    int max_dist = Hipac.Max_km;
+        //    return max_dist;
         //}
+     
         private void rent_calculate_Click(object sender, EventArgs e)
         {
             string options = comboBox_options.SelectedItem.ToString();
@@ -115,7 +100,8 @@ namespace carrental
                 Hire long_cal = new Hire();
                 long_cal.hire_distance = Convert.ToInt32(Basic_operations_distance());
                 long_cal.time_hire = Convert.ToInt32(Basic_operations());
-                long_cal.package_distance = Basic_operations_Longhirepack();
+               // long_cal.package_distance
+                long_cal.LH_Pack = long_hirepackages.SelectedItem.ToString();
                 total_bill.Text = Convert.ToInt32(long_cal.total_Long_hire_charge_cal()).ToString();
                 extra_km_charge_.Text = long_cal.extraKmCost().ToString();
                 over_night_charge.Text = long_cal.DriverOverNightRate().ToString();              

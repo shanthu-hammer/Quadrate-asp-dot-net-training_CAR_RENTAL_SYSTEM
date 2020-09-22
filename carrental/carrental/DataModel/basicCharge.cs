@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 namespace carrental.DataModel
 {
-    class basicCharges
+   public class basicCharge
     {
         [Key]
         public int StdChrgId { get; set; }

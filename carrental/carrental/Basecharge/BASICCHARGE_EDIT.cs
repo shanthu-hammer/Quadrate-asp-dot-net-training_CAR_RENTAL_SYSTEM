@@ -21,7 +21,7 @@ namespace carrental
         //ADD BTN
         private void button6_Click(object sender, EventArgs e)
         {
-            basicCharges data = new basicCharges();
+            basicCharge data = new basicCharge();
 
      
             Model modelInstance = new Model();

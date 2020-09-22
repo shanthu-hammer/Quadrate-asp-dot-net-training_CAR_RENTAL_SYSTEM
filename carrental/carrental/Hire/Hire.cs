@@ -8,7 +8,7 @@ namespace carrental
 {
     class Hire:Rent
     {
-
+       public  string LH_Pack;
         int wait_time;
         public int package_time = 24;///Data fom table 
         public int wait_time_cost;
@@ -20,7 +20,7 @@ namespace carrental
         public int extra_km_cost;///Data fom table 
         int km_cost=20;
 
-        public int package_cost = 1500;///data from table 
+        public int package_cost;///data from table 
 
         int cost_per_hour = 20;
 
@@ -30,7 +30,21 @@ namespace carrental
         int Per_night_Rate=20;
         int total_Long_hire_charge;
         float total_base_hire_charge;
-       /// public Hire() { }
+        /// public Hire() { }
+
+
+       public Hire()
+        {
+
+            LongHire Hipac = new LongHire(LH_Pack);
+            package_distance =  Hipac.Calcm();
+            // package_distance= max_dist;
+            package_cost = Hipac.pac_rate();
+
+        }
+
+
+
         public int WaitTimeCost()
         {
             if (time_hire > package_time)

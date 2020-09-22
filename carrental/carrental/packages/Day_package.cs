@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using carrental.DataModel;
 namespace carrental
 {
     class Day_package
@@ -19,7 +19,12 @@ namespace carrental
         }
         public int calc_vec()
         {
+            Model VC = new Model();
 
+            var vec_Charge = (from vehicle in VC.vehicles
+                              where vehicle.VehicleName == selected_pack
+                              select vehicle.RatePerhour).FirstOrDefault();
+            return Max_km;
             if (selected_pack == "Airport")
             {
                 Max_km = 100;

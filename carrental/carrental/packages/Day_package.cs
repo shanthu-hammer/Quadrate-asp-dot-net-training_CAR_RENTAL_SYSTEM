@@ -19,6 +19,7 @@ namespace carrental
         }
         public int calc_vec()
         {
+
             if (selected_pack == "Airport")
             {
                 Max_km = 100;

@@ -128,12 +128,17 @@ namespace carrental
 
         private void addingbtn_Click(object sender, EventArgs e)
         {
-        
-           
-                vehicle data = new vehicle();
 
-                ///var Model = new DatabaseEntities();
-                Model modelInstance = new Model();
+
+            
+            EDIT f2 = new EDIT(); //this is the change, code for redirect  
+            f2.ShowDialog();
+            
+
+            ///  vehicle data = new vehicle();
+
+            ///var Model = new DatabaseEntities();
+            ///   Model modelInstance = new Model();
             ///.vehicle///.AddObject(TableEntityInstance);
 
             //data.VehicleName = "innova";
@@ -143,10 +148,10 @@ namespace carrental
             ///// Model.vehicles.Add(data);
             //modelInstance.vehicles.Add(data);
             //modelInstance.SaveChanges();
-            Model mod = new Model();
-            var da = new vehicle { VehicleId = 2 };
-            mod.Entry(da).State = EntityState.Deleted;
-            mod.SaveChanges();
+            //Model mod = new Model();
+            //var da = new vehicle { VehicleId = 2 };
+            //mod.Entry(da).State = EntityState.Deleted;
+            //mod.SaveChanges();
 
 
         }

@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace carrental
 {
-    public partial class Main : Form
+    public partial class EDIT_VECHICLE : Form
     {
-        public Main()
+        public EDIT_VECHICLE()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            customer c = new customer();
-            c.Show();
-        }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

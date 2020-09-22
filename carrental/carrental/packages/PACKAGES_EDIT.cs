@@ -1,26 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using carrental.DataModel;
 using System.Data.Entity;
+
+
 namespace carrental
 {
-    public partial class UserControl1 : UserControl
+    public partial class EDIT : Form
     {
-        public UserControl1()
+        public EDIT()
         {
             InitializeComponent();
         }
 
         private void ADD_Click(object sender, EventArgs e)
         {
-            DayPackage P= new DayPackage();
+            DayPackage P = new DayPackage();
 
             ///var Model = new DatabaseEntities();
             Model MP = new Model();

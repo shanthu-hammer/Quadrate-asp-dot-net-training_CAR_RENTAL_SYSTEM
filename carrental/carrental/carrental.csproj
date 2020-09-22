@@ -64,7 +64,19 @@
     <Compile Include="DataModel\Model.cs" />
     <Compile Include="DataModel\Packages.cs" />
     <Compile Include="DataModel\vehicle.cs" />
-    <Compile Include="Day_package.cs" />
+    <Compile Include="EDIT_VECHICLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDIT_VECHICLE.Designer.cs">
+      <DependentUpon>EDIT_VECHICLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="packages\Day_package.cs" />
+    <Compile Include="packages\PACKAGES_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="packages\PACKAGES_EDIT.Designer.cs">
+      <DependentUpon>PACKAGES_EDIT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hire\LongHire.cs" />
     <Compile Include="Migrations\202009201541227_vehicle.cs" />
     <Compile Include="Migrations\202009201541227_vehicle.Designer.cs">
@@ -105,13 +117,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainDisplay.cs">
       <SubType>Form</SubType>
@@ -125,12 +130,6 @@
     <Compile Include="emponly\emponly.Designer.cs">
       <DependentUpon>emponly.cs</DependentUpon>
     </Compile>
-    <Compile Include="packages\packages.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="packages\packages.Designer.cs">
-      <DependentUpon>packages.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vehicle\Vechicle.cs" />
     <EmbeddedResource Include="carreg.resx">
       <DependentUpon>carreg.cs</DependentUpon>
@@ -141,8 +140,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="packages\PACKAGES_EDIT.resx">
+      <DependentUpon>PACKAGES_EDIT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009201541227_vehicle.resx">
       <DependentUpon>202009201541227_vehicle.cs</DependentUpon>
@@ -176,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="emponly\emponly.resx">
       <DependentUpon>emponly.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="packages\packages.resx">
-      <DependentUpon>packages.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

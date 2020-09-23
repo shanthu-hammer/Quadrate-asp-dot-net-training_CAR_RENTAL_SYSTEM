@@ -15,24 +15,26 @@ namespace carrental
         public LongHire(string LH_Pack)
         {
             selected_Lpack = LH_Pack;
-            
+
         }
 
-        public int Calcm()
+        public int Calcm(string LH_Pack)
         {
-          // Model LHC = new Model();
-
-            var Max_km = (from DayPackage in LHC.DayPackages
+            // Model LHC = new Model();
+            selected_Lpack = LH_Pack;
+            var Max_km_ = (from DayPackage in LHC.DayPackages
                           where DayPackage.PName == selected_Lpack
                               select DayPackage.PDistance).FirstOrDefault();
+            Max_km = Max_km_;
 
-        
+
             return Max_km;
         }
         public int pac_rate() {
             var p_rate = (from DayPackage in LHC.DayPackages
                           where DayPackage.PName == selected_Lpack
                           select DayPackage.Pcost).FirstOrDefault();
+
             return p_rate;
         }
     }

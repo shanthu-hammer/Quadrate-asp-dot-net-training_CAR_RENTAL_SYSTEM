@@ -33,7 +33,7 @@ namespace carrental
         {         
             string selected_vec = vec_button.SelectedItem.ToString();
             Vechicle vec = new Vechicle(selected_vec);
-            int vecChargePerhour = vec.calc_vec();
+            int vecChargePerhour = vec.calc_vec(selected_vec);
             return vecChargePerhour;
         }
         public int Basic_operations()
@@ -50,20 +50,36 @@ namespace carrental
             int hireDistance = int.Parse(distance.Text);
             return hireDistance;
         }
-        public int Basic_operations_hirepack() {
-            string H_Pack=day_hirepackages.SelectedItem.ToString();
-            Day_package Hipac = new Day_package(H_Pack);
-            int max_dist = Hipac.Max_km;
-            return max_dist;
-        }
-        //public int Basic_operations_Longhirepack()
-        //{
-        //    string LH_Pack = long_hirepackages.SelectedItem.ToString();
-        //    Day_package Hipac = new Day_package(LH_Pack);
+        //public int Basic_operations_hirepack() {
+        //    string H_Pack=day_hirepackages.SelectedItem.ToString();
+        //    Day_package Hipac = new Day_package(H_Pack);
         //    int max_dist = Hipac.Max_km;
         //    return max_dist;
         //}
-     
+        public int Basic_operations_Max_Dist()
+        {
+            string LH_Pack = long_hirepackages.SelectedItem.ToString();
+            LongHire Hipac = new LongHire(LH_Pack);
+            Hipac.Calcm(LH_Pack);
+            int max_dist = Hipac.Max_km;
+            return max_dist;
+        }
+        //public void addingdata() {
+        //    vehicle data = new vehicle();
+
+        //    ///var Model = new DatabaseEntities();
+        //    Model modelInstance = new Model();
+        //    ///.vehicle///.AddObject(TableEntityInstance);
+            
+        //    data.VehicleName = "innova";
+        //    data.RatePerhour = 100;
+        //    data.RatePerNightPark = 25;
+        //    //this.Model.vehicle.AddObject(vehicle);
+        //    /// Model.vehicles.Add(data);
+        //    modelInstance.vehicles.Add(data);
+        //    modelInstance.SaveChanges();
+            
+        //}
         private void rent_calculate_Click(object sender, EventArgs e)
         {
             string options = comboBox_options.SelectedItem.ToString();
@@ -88,7 +104,7 @@ namespace carrental
                 day_cal.hire_distance= Convert.ToInt32(Basic_operations_distance());
                 day_cal.time_hire = Convert.ToInt32(Basic_operations());
                 day_cal.vec_Charge_ = Vehicle_option();
-                day_cal.package_distance = Basic_operations_hirepack();
+                day_cal.package_distance = Basic_operations_Max_Dist();
                 extra_km_charge.Text = day_cal.extraKmCost().ToString();
                waiting_charge.Text = day_cal.WaitTimeCost().ToString();
                 base_hire_charge.Text = Convert.ToInt32(day_cal.package_cost).ToString();
@@ -100,8 +116,7 @@ namespace carrental
                 Hire long_cal = new Hire();
                 long_cal.hire_distance = Convert.ToInt32(Basic_operations_distance());
                 long_cal.time_hire = Convert.ToInt32(Basic_operations());
-               // long_cal.package_distance
-                long_cal.LH_Pack = long_hirepackages.SelectedItem.ToString();
+                long_cal.package_distance = Basic_operations_Max_Dist();////
                 total_bill.Text = Convert.ToInt32(long_cal.total_Long_hire_charge_cal()).ToString();
                 extra_km_charge_.Text = long_cal.extraKmCost().ToString();
                 over_night_charge.Text = long_cal.DriverOverNightRate().ToString();              
@@ -112,7 +127,7 @@ namespace carrental
 
         private void addingbtn_Click(object sender, EventArgs e)
         {
-            DISTRIBUOR f2 = new DISTRIBUOR(); //this is the change, code for redirect  
+            DISTRIBUOR f2 = new DISTRIBUOR(); //
             f2.ShowDialog();                             
         }
 

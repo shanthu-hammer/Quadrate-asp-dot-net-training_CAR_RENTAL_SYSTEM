@@ -17,19 +17,22 @@ namespace carrental
         //        where vehicle.JobID == QJobID
         //        select jlist).ToList();
         public string selected_vec_;
-        public int vec_Charge;
+       public int vec_Charge;
 
-        public Vechicle(string selected_vec) {
-         selected_vec_ = selected_vec;
+        public Vechicle(string selected_vec)
+        {
+            selected_vec_ = selected_vec;
 
         }
-        public int calc_vec(){
+        public int calc_vec(string selected_vec)
+        {
             Model VC = new Model();
 
-            var vec_Charge = (from vehicle in VC.vehicles
+            var vec_Charge_ = (from vehicle in VC.vehicles
                                 where vehicle.VehicleName == selected_vec_
-                                select vehicle.RatePerhour).FirstOrDefault();   
-                   return vec_Charge;
+                                select vehicle.RatePerhour).FirstOrDefault();
+            vec_Charge = vec_Charge_;
+            return vec_Charge;
        }
    
     }

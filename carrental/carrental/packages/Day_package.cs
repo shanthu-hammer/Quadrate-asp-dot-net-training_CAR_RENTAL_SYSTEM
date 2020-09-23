@@ -25,27 +25,7 @@ namespace carrental
                               where vehicle.VehicleName == selected_pack
                               select vehicle.RatePerhour).FirstOrDefault();
             return Max_km;
-            if (selected_pack == "Airport")
-            {
-                Max_km = 100;
-                return Max_km;
-            }
-            else if (selected_pack == "Postoffice")
-            {
-                Max_km = 200;
-                return Max_km;
-            }
-            else if (selected_pack == "Town")
-            {
-                Max_km = 300;
-                return Max_km;
-            }
-            else if (selected_pack == "Colombo")
-            {
-                Max_km = 400;
-                return Max_km;
-            }
-            return Max_km;
+          
 
 
         }

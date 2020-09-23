@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using carrental.DataModel;
 namespace carrental
 {
     class Hire:Rent
     {
-       public  string LH_Pack;
+
         int wait_time;
         public int package_time = 24;///Data fom table 
         public int wait_time_cost;
@@ -20,7 +20,7 @@ namespace carrental
         public int extra_km_cost;///Data fom table 
         int km_cost=20;
 
-        public int package_cost;///data from table 
+        public int package_cost = 1500;///data from table 
 
         int cost_per_hour = 20;
 
@@ -29,22 +29,8 @@ namespace carrental
        public int Total_Over_Nights;
         int Per_night_Rate=20;
         int total_Long_hire_charge;
-        float total_base_hire_charge;
+        float total_base_hire_charge; int extra_km_cost_;
         /// public Hire() { }
-
-
-       public Hire()
-        {
-
-            LongHire Hipac = new LongHire(LH_Pack);
-            package_distance =  Hipac.Calcm();
-            // package_distance= max_dist;
-            package_cost = Hipac.pac_rate();
-
-        }
-
-
-
         public int WaitTimeCost()
         {
             if (time_hire > package_time)
@@ -64,28 +50,29 @@ namespace carrental
         }
         public int extraKmCost()
         {
+            
             if (hire_distance > package_distance)
             {
                 extra_km = hire_distance - package_distance;
-                extra_km_cost = extra_km * km_cost;
+                extra_km_cost_ = extra_km * km_cost;
                 /// return 
                 /// testc= extra_km_cost;
                 ///balance[1] = package_distance * extra_km_cost;
-                return extra_km_cost;
+                return extra_km_cost_;
             }
             else if (hire_distance<= package_distance)
             {
-                extra_km_cost = 0;
-                return extra_km_cost;
+                extra_km_cost_ = 0;
+                return extra_km_cost_;
             }
-
+            extra_km_cost = extra_km_cost_;
             return extra_km_cost;
         }
 
         public float total_base_hire_charge_cal()///gives total bill for DAYHIRE 
         {
 
-            total_base_hire_charge = Convert.ToInt32(wait_time_cost + extra_km_cost + package_cost);
+            total_base_hire_charge = Convert.ToInt32(WaitTimeCost() + extraKmCost() + package_cost);
             return total_base_hire_charge;/**/
         }
 /**/

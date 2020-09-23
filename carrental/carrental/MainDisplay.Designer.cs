@@ -137,6 +137,7 @@
             // 
             this.vec_button.FormattingEnabled = true;
             this.vec_button.Items.AddRange(new object[] {
+            "innova",
             "ToyatoCHR",
             "TataINNOVA",
             "Alto 800",
@@ -292,10 +293,10 @@
             // 
             this.day_hirepackages.FormattingEnabled = true;
             this.day_hirepackages.Items.AddRange(new object[] {
-            "Airport",
-            "Postoffice",
-            "Town",
-            "Colombo"});
+            "Batti",
+            "ooty",
+            "kodaikanal",
+            "Jaffna"});
             this.day_hirepackages.Location = new System.Drawing.Point(494, 50);
             this.day_hirepackages.Name = "day_hirepackages";
             this.day_hirepackages.Size = new System.Drawing.Size(121, 21);
@@ -305,9 +306,9 @@
             // 
             this.long_hirepackages.FormattingEnabled = true;
             this.long_hirepackages.Items.AddRange(new object[] {
-            "Batti",
             "ooty",
             "kodaikanal",
+            "Batti",
             "Jaffna"});
             this.long_hirepackages.Location = new System.Drawing.Point(748, 50);
             this.long_hirepackages.Name = "long_hirepackages";

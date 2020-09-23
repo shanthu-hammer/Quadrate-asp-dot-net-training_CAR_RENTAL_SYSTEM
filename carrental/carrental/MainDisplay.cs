@@ -92,13 +92,13 @@ namespace carrental
             else if (options == "Day_Hire")
             {
               
-                Hire day_cal = new Hire();
-              
-                day_cal.hire_distance= Convert.ToInt32(Basic_operations_distance());
-                day_cal.time_hire = Convert.ToInt32(Basic_operations());
-                day_cal.vec_Charge_ = Vehicle_option();
-                day_cal.package_distance = Basic_operations_Max_Dist();
-                day_cal.package_cost = Basic_operations_Packprice();
+                Hire day_cal = new Hire( Basic_operations_distance(), Basic_operations(), Vehicle_option(), Basic_operations_Max_Dist(), Basic_operations_Packprice());//Basic_operations_distance(),Basic_operations(),Vehicle_option(),Basic_operations_Max_Dist(),Basic_operations_Packprice()
+
+                //day_cal.hire_distance= Convert.ToInt32(Basic_operations_distance());
+                //day_cal.time_hire = Convert.ToInt32(Basic_operations());
+                //day_cal.vec_Charge_ = Vehicle_option();
+                //day_cal.package_distance = Basic_operations_Max_Dist();
+                //day_cal.package_cost = Basic_operations_Packprice();
 
 
                 extra_km_charge.Text = day_cal.extraKmCost().ToString();
@@ -109,10 +109,13 @@ namespace carrental
 
             else if (options == "Long_Hire")
             {
-                Hire long_cal = new Hire();
-                long_cal.hire_distance = Convert.ToInt32(Basic_operations_distance());
-                long_cal.time_hire = Convert.ToInt32(Basic_operations());
-                long_cal.package_distance = Basic_operations_Max_Dist();
+                Hire long_cal = new Hire(Basic_operations_distance(), Basic_operations(), Vehicle_option(), Basic_operations_Max_Dist(), Basic_operations_Packprice());// Basic_operations_distance(), Basic_operations(), Vehicle_option(), Basic_operations_Max_Dist(), Basic_operations_Packprice()
+                //long_cal.hire_distance = Convert.ToInt32(Basic_operations_distance());
+                //long_cal.time_hire = Convert.ToInt32(Basic_operations());
+                ////line for vev charge 
+                //long_cal.package_distance = Basic_operations_Max_Dist();
+
+
                 total_bill.Text = Convert.ToInt32(long_cal.total_Long_hire_charge_cal()).ToString();
                 extra_km_charge_.Text = long_cal.extraKmCost().ToString();
                 over_night_charge.Text = long_cal.DriverOverNightRate().ToString();              

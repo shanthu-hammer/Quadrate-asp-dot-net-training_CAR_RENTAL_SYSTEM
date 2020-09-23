@@ -8,7 +8,8 @@ namespace carrental
 {
     class Hire:Rent
     {
-
+        ///public int time_hire;//passin as arguments
+        ///public int vec_Charge_;// passin as arguments
         int wait_time;
         public int package_time = 24;///Data fom table 
         public int wait_time_cost;
@@ -72,8 +73,8 @@ namespace carrental
         public float total_base_hire_charge_cal()///gives total bill for DAYHIRE 
         {
 
-            total_base_hire_charge = Convert.ToInt32(WaitTimeCost() + extraKmCost() + package_cost);
-            return total_base_hire_charge;/**/
+            total_base_hire_charge = Convert.ToInt32(WaitTimeCost() + extraKmCost() + package_cost+ ToTvechicle(vec_Charge_, time_hire));
+            return total_base_hire_charge;
         }
 /**/
 

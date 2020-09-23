@@ -113,14 +113,14 @@ namespace carrental
             total_DriverCharge = time_hire * DriverCharge;
             return total_DriverCharge;
         }
-        public int ToTvechicle() {
+        public int ToTvechicle(int vec_Cha_,int time_hire_) {
             /// vec_cost Vech = new vec_cost(time_hire,vec_Charge_;);
-            int Selected_vec_cost = time_hire * vec_Charge_;
+            int Selected_vec_cost = time_hire_ * vec_Cha_;
             return Selected_vec_cost;
         }
             public int Rent_Total()
             {
-                TotRentWithDriver = Convert.ToInt32(drivercost() + rent_calculation() + ToTvechicle());
+                TotRentWithDriver = Convert.ToInt32(drivercost() + rent_calculation() + ToTvechicle(vec_Charge_, time_hire));
                 return TotRentWithDriver;
             }         
        }

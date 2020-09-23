@@ -24,11 +24,8 @@ namespace carrental
             var vec_Charge = (from vehicle in VC.vehicles
                               where vehicle.VehicleName == selected_pack
                               select vehicle.RatePerhour).FirstOrDefault();
-            return Max_km;
-          
-
-
-        }
+            return Max_km;        
+                   }
 
     }
 }

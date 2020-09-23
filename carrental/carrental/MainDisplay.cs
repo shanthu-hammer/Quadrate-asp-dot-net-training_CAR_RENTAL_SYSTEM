@@ -59,27 +59,19 @@ namespace carrental
         public int Basic_operations_Max_Dist()
         {
             string LH_Pack = long_hirepackages.SelectedItem.ToString();
-            LongHire Hipac = new LongHire(LH_Pack);
-            Hipac.Calcm(LH_Pack);
-            int max_dist = Hipac.Max_km;
+            LongHire Hipac = new LongHire();
+            int max_dist = Hipac.Calcm(LH_Pack);
             return max_dist;
         }
-        //public void addingdata() {
-        //    vehicle data = new vehicle();
-
-        //    ///var Model = new DatabaseEntities();
-        //    Model modelInstance = new Model();
-        //    ///.vehicle///.AddObject(TableEntityInstance);
-            
-        //    data.VehicleName = "innova";
-        //    data.RatePerhour = 100;
-        //    data.RatePerNightPark = 25;
-        //    //this.Model.vehicle.AddObject(vehicle);
-        //    /// Model.vehicles.Add(data);
-        //    modelInstance.vehicles.Add(data);
-        //    modelInstance.SaveChanges();
-            
-        //}
+        public int Basic_operations_Packprice()
+        {
+            string LH_Pack = long_hirepackages.SelectedItem.ToString();
+            LongHire Hipac = new LongHire();
+            int p_rate = Hipac.pac_rate(LH_Pack);
+            return p_rate;
+        }
+       
+       
         private void rent_calculate_Click(object sender, EventArgs e)
         {
             string options = comboBox_options.SelectedItem.ToString();
@@ -105,6 +97,9 @@ namespace carrental
                 day_cal.time_hire = Convert.ToInt32(Basic_operations());
                 day_cal.vec_Charge_ = Vehicle_option();
                 day_cal.package_distance = Basic_operations_Max_Dist();
+                day_cal.package_cost = Basic_operations_Packprice();
+
+
                 extra_km_charge.Text = day_cal.extraKmCost().ToString();
                waiting_charge.Text = day_cal.WaitTimeCost().ToString();
                 base_hire_charge.Text = Convert.ToInt32(day_cal.package_cost).ToString();
@@ -116,7 +111,7 @@ namespace carrental
                 Hire long_cal = new Hire();
                 long_cal.hire_distance = Convert.ToInt32(Basic_operations_distance());
                 long_cal.time_hire = Convert.ToInt32(Basic_operations());
-                long_cal.package_distance = Basic_operations_Max_Dist();////
+                long_cal.package_distance = Basic_operations_Max_Dist();
                 total_bill.Text = Convert.ToInt32(long_cal.total_Long_hire_charge_cal()).ToString();
                 extra_km_charge_.Text = long_cal.extraKmCost().ToString();
                 over_night_charge.Text = long_cal.DriverOverNightRate().ToString();              

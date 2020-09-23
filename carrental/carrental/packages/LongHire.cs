@@ -12,11 +12,11 @@ namespace carrental
         public string selected_Lpack;
         public int Max_km;
         public int p_rate;
-        public LongHire(string LH_Pack)
-        {
-            selected_Lpack = LH_Pack;
+        //public LongHire(string LH_Pack)
+        //{
+        //    selected_Lpack = LH_Pack;
 
-        }
+        //}
 
         public int Calcm(string LH_Pack)
         {
@@ -30,11 +30,12 @@ namespace carrental
 
             return Max_km;
         }
-        public int pac_rate() {
-            var p_rate = (from DayPackage in LHC.DayPackages
+        public int pac_rate(string LH_Pack) {
+            selected_Lpack = LH_Pack;
+            var p_rate_ = (from DayPackage in LHC.DayPackages
                           where DayPackage.PName == selected_Lpack
                           select DayPackage.Pcost).FirstOrDefault();
-
+            p_rate = p_rate_;
             return p_rate;
         }
     }

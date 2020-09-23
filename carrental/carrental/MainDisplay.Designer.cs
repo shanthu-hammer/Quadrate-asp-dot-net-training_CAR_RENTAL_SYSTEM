@@ -137,11 +137,9 @@
             // 
             this.vec_button.FormattingEnabled = true;
             this.vec_button.Items.AddRange(new object[] {
-            "innova",
-            "ToyatoCHR",
-            "TataINNOVA",
-            "Alto 800",
-            "idica"});
+            "Toyato CHR",
+            "Tata INNOVA",
+            "Alto 800"});
             this.vec_button.Location = new System.Drawing.Point(136, 20);
             this.vec_button.Name = "vec_button";
             this.vec_button.Size = new System.Drawing.Size(200, 21);

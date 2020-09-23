@@ -111,6 +111,7 @@
     <Compile Include="Migrations\202009221541065_removeingreadonly.Designer.cs">
       <DependentUpon>202009221541065_removeingreadonly.cs</DependentUpon>
     </Compile>
+    <Compile Include="PackageSelector.cs" />
     <Compile Include="program.cs" />
     <Compile Include="Vehicle\EDIT_VECHICLE.cs">
       <SubType>Form</SubType>

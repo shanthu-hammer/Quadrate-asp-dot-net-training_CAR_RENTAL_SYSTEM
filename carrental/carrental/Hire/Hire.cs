@@ -8,6 +8,7 @@ namespace carrental
 {
     class Hire:Rent
     {
+        int[] pack_details;
         ///public int time_hire;//passin as arguments
         ///public int vec_Charge_;// passin as arguments
         int wait_time;
@@ -21,7 +22,7 @@ namespace carrental
         public int extra_km_cost;///Data fom table 
         int km_cost=20;
 
-        public int package_cost = 1500;///data from table 
+        public int package_cost;///data from table 
 
         int cost_per_hour = 20;
 
@@ -32,6 +33,7 @@ namespace carrental
         int total_Long_hire_charge;
         float total_base_hire_charge; int extra_km_cost_;
         /// public Hire() { }
+     ///   public int Wait_values() { }
         public int WaitTimeCost()
         {
             if (time_hire > package_time)

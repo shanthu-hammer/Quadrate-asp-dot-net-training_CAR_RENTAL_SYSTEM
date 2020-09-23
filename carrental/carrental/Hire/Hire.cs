@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 using carrental.DataModel;
 namespace carrental
 {
-    class Hire:Rent
+    class Hire//:Rent
     {
-        int[] pack_details;
+        //public Hire(int a,int b) { }
+
+        //int[] pack_details;
         ///public int time_hire;//passin as arguments
         ///public int vec_Charge_;// passin as arguments
+        public int time_hire;
+        public int vec_Charge_;
         int wait_time;
         public int package_time = 24;///Data fom table 
         public int wait_time_cost;
@@ -21,7 +25,7 @@ namespace carrental
         int extra_km;
         public int extra_km_cost;///Data fom table 
         int km_cost=20;
-
+        public int Selected_vec_cost;
         public int package_cost;///data from table 
 
         int cost_per_hour = 20;
@@ -71,11 +75,16 @@ namespace carrental
             extra_km_cost = extra_km_cost_;
             return extra_km_cost;
         }
-
+        public int ToTvechicle(int vec_Charge_, int time_hire)
+        {
+            /// vec_cost Vech = new vec_cost(time_hire,vec_Charge_;);
+            int Selected_vec_cost = time_hire * vec_Charge_;
+            return Selected_vec_cost;
+        }
         public float total_base_hire_charge_cal()///gives total bill for DAYHIRE 
         {
 
-            total_base_hire_charge = Convert.ToInt32(WaitTimeCost() + extraKmCost() + package_cost+ ToTvechicle(vec_Charge_, time_hire));
+            total_base_hire_charge = Convert.ToInt32(WaitTimeCost() + extraKmCost() + package_cost+Selected_vec_cost);//+ ToTvechicle(vec_Charge_, time_hire)
             return total_base_hire_charge;
         }
 /**/

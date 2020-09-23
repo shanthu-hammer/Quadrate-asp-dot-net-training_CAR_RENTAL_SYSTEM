@@ -12,7 +12,7 @@ namespace carrental
 {
     class Rent
     {
-       
+      
         Model dbbb = new Model();
         int Selected_vec_cost;
         public int vec_Charge_;
@@ -41,8 +41,13 @@ namespace carrental
         int WithoutWkDays = 0;
 
         //public Rent(int Days){}
-       
-            public float rent_calculation() 
+        public Rent(int a, int b,bool c)
+        {
+            time_hire = a;
+            vec_Charge_ = b;
+            driver = c;
+        }
+        public float rent_calculation() 
             // Following code is for calculating RENT
         {
             
@@ -118,9 +123,9 @@ namespace carrental
             int Selected_vec_cost = time_hire_ * vec_Cha_;
             return Selected_vec_cost;
         }
-            public int Rent_Total()
-            {
-                TotRentWithDriver = Convert.ToInt32(drivercost() + rent_calculation() + ToTvechicle(vec_Charge_, time_hire));
+            public int Rent_Total()//drivercost()
+        {
+                TotRentWithDriver = Convert.ToInt32(total_DriverCharge + rent_calculation() + ToTvechicle(vec_Charge_, time_hire));
                 return TotRentWithDriver;
             }         
        }

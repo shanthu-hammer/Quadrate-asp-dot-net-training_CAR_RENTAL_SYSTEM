@@ -79,13 +79,14 @@ namespace carrental
             if (options == "Rent")
             {
               
-                Rent cal = new Rent();
-                cal.time_hire = Convert.ToInt32(Basic_operations());
-                cal.driver = btmdriveryes.Checked;                      ///cal.rent_calculation();
-                cal.vec_Charge_ = Vehicle_option();
-                total_bill.Text = Convert.ToInt32(cal.Rent_Total()).ToString();
+                Rent cal = new Rent(Basic_operations(), Vehicle_option(), btmdriveryes.Checked);
+               // cal.time_hire = Convert.ToInt32(Basic_operations());
+                //cal.driver = btmdriveryes.Checked;                      ///cal.rent_calculation();
+               // cal.vec_Charge_ = Vehicle_option();
+                
                 total_driver_cost.Text = Convert.ToInt32(cal.drivercost()).ToString();
-               
+                total_bill.Text = Convert.ToInt32(cal.Rent_Total()).ToString();
+
             }
 
             else if (options == "Day_Hire")

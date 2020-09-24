@@ -4,34 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using carrental.DataModel;
+using carrental.DataModel;
+using System.Data.Entity;
 namespace carrental
+
 {
     class Rent
     {
+      
+        Model dbbb = new Model();
         int Selected_vec_cost;
         public int vec_Charge_;
-            public int time_hire;
-            public bool driver;
-            public int total_DriverCharge;
-            public float TotalRent;
-            public int TotRentWithDriver;
-            int DriverCharge = 100;
-            int TotDayAmnt;
-            int TotWeekAmnt;
-            int TotMonthAmnt;
+        public int time_hire;
+        public bool driver;
+        public int total_DriverCharge;
+        public float TotalRent;
+        public int TotRentWithDriver;
+        int DriverCharge;    
 
-            int Weeks = 0;
-            int Months = 0;
-            int WithoutWkDays = 0;
+        int TotDayAmnt;
+        int TotWeekAmnt;
+        int TotMonthAmnt;
+       
+        int Weeks = 0;
+        int Months = 0;
+        int WithoutWkDays = 0;
+               
+        public Rent(int time, int vehi,bool driver__)
+        {
+            time_hire = time;
+            vec_Charge_ = vehi;
+            driver = driver__;
+        }
+        public float rent_calculation()             
+        {      
            
-            // Following code is for calculating RENT
-            public float rent_calculation()
-            {
-                int RatePerDay = 100;
+            int RatePerDay = 100; ///getting  the drivers price per day 
                 int RatePerWeek = 600;
-                int RatePerMonth = 2900;
-                ///getting  the drivers price per day 
+                int RatePerMonth = 2900;               
                 int driver_cost_perday;
 
                 if (time_hire > 6)
@@ -46,15 +57,14 @@ namespace carrental
                         TotWeekAmnt = Weeks * RatePerWeek;
                         TotMonthAmnt = Months * RatePerMonth;
                         TotalRent = TotMonthAmnt + TotWeekAmnt + TotDayAmnt;
-                        return TotalRent;
-                        ///
+                        return TotalRent;                 
                     }
                     else
                     {
                         Weeks = Convert.ToInt32(time_hire / 7);
                         WithoutWkDays = Convert.ToInt32(time_hire - (Weeks * 7));
 
-                    //int select_vec_charg = vec_Charge_ * time_hire;
+                
                         TotDayAmnt = WithoutWkDays * RatePerDay;
                         TotWeekAmnt = Weeks * RatePerWeek;
                         
@@ -67,13 +77,15 @@ namespace carrental
                     TotalRent = Convert.ToInt32(time_hire * RatePerDay);
                     TotDayAmnt = Convert.ToInt32(TotalRent);
                     WithoutWkDays = Convert.ToInt32(time_hire);
-
                 }
-
             return TotalRent;              
             }
         public int drivercost()
         {
+            var DriverCharge = (from basicCharge in dbbb.basicCharges
+                        where basicCharge.StdChrgId == 1
+                        select basicCharge.DriverCharge).FirstOrDefault();          
+
             switch (driver)
             {
                 case true:
@@ -86,19 +98,18 @@ namespace carrental
                     break;
                 default:
                     break;
-
             }
             total_DriverCharge = time_hire * DriverCharge;
             return total_DriverCharge;
         }
-        public int ToTvechicle() {
-            /// vec_cost Vech = new vec_cost(time_hire,vec_Charge_;);
-            int Selected_vec_cost = time_hire * vec_Charge_;
+        public int ToTvechicle(int vec_Cha_, int time_hire_) {
+          
+            int Selected_vec_cost = time_hire_ * vec_Cha_;
             return Selected_vec_cost;
         }
             public int Rent_Total()
-            {
-                TotRentWithDriver = Convert.ToInt32(drivercost() + rent_calculation() + ToTvechicle());
+        {
+                TotRentWithDriver = Convert.ToInt32(total_DriverCharge + rent_calculation() + ToTvechicle(vec_Charge_, time_hire));
                 return TotRentWithDriver;
             }         
        }

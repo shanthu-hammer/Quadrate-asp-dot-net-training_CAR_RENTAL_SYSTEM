@@ -21,6 +21,8 @@ namespace carrental
 
         private void button6_Click(object sender, EventArgs e)
         {
+
+          
          
             vehicle data = new vehicle();
 
@@ -29,7 +31,7 @@ namespace carrental
             ///.vehicle///.AddObject(TableEntityInstance);
 
             data.VehicleName = vec_name.Text; ///getting value from textbox
-            data.RatePerhour = int.Parse(vec_name.Text);//getting value from textbox
+            data.RatePerhour = int.Parse(hourrat.Text);//getting value from textbox
             data.RatePerNightPark = int.Parse(Nightpar_vec.Text);//getting value from textbox
 
 
@@ -58,6 +60,21 @@ namespace carrental
             var da = new vehicle { VehicleId = 1 };
             mod.Entry(da).State = EntityState.Deleted;
             mod.SaveChanges();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void viewgrid_Click(object sender, EventArgs e)
+        {
+            Model che = new Model();
+            var ForView = from vehicle in che.vehicles
+
+                           select vehicle;
+            dataGridView1.DataSource = ForView.ToList();
+            
         }
     }
 }

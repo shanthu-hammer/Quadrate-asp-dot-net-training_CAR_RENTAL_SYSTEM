@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using carrental.DataModel;
-using carrental.DataModel;
+
+using System.Data.Entity;
 namespace carrental
 {
     class Hire//:Rent
@@ -12,11 +14,10 @@ namespace carrental
         Model dbHire = new Model();
      
 
-        //int[] pack_details;
-        ///public int time_hire;//passin as arguments
-        ///public int vec_Charge_;// passin as arguments
+      
+      public int vec_Charge_;
         public int time_hire;
-        public int vec_Charge_;
+   
         int wait_time;
         public int package_time = 24;///Data fom table 
         public int wait_time_cost;
@@ -32,7 +33,7 @@ namespace carrental
 
         int cost_per_hour = 20;
 
-       /// public float[] balance = new float[10];
+       
         int Driver_Over_NightRate;
        public int Total_Over_Nights;
         int Per_night_Rate=20;
@@ -54,8 +55,7 @@ namespace carrental
             {
                 wait_time = time_hire - package_time;
                 wait_time_cost = wait_time * cost_per_hour;
-                /// test1=wait_time_cost;
-                /// balance[0] = wait_time * cost_per_hour;
+                
                 return wait_time_cost;
 
             }
@@ -75,9 +75,7 @@ namespace carrental
             {
                 extra_km = hire_distance - package_distance;
                 extra_km_cost_ = extra_km * km_cost;
-                /// return 
-                /// testc= extra_km_cost;
-                ///balance[1] = package_distance * extra_km_cost;
+                
                 return extra_km_cost_;
             }
             else if (hire_distance<= package_distance)
@@ -88,26 +86,31 @@ namespace carrental
             extra_km_cost = extra_km_cost_;
             return extra_km_cost;
         }
-        public int ToTvechicle(int vec_Charge_, int time_hire)
+        public int ToTvechicles(int vec_Cha_, int time_hire_)
         {
           
-             Selected_vec_cost = time_hire * vec_Charge_;
+            Selected_vec_cost = (vec_Cha_ * time_hire_);
             return Selected_vec_cost;
         }
         public float total_base_hire_charge_cal()///gives total bill for DAYHIRE 
         {
 
-            total_base_hire_charge = Convert.ToInt32(WaitTimeCost() + extraKmCost() + package_cost+ Selected_vec_cost);//+ ToTvechicle(vec_Charge_, time_hire)
+            total_base_hire_charge = Convert.ToInt32(WaitTimeCost() + extraKmCost() + package_cost+ ToTvechicles(vec_Charge_, time_hire));//+ ToTvechicle(vec_Charge_, time_hire))+ (vec_Charge_ *time_hire// passin as arguments
+     
             return total_base_hire_charge;
         }
 
 
         // Following code is for calculating LONG HIRE 
 
-        public int DriverOverNightRate()
+        public int DriverOverNightRate()//time_hire
         {
-            Total_Over_Nights = time_hire / 24;
-            Driver_Over_NightRate = Total_Over_Nights * Per_night_Rate;
+           
+            var Per_night_Rate = (from basicCharge in dbHire.basicCharges
+                           where basicCharge.StdChrgId == 1
+                           select basicCharge.OvernightStayCharge).FirstOrDefault();
+           // Total_Over_Nights = time_hire;
+            Driver_Over_NightRate = time_hire * Per_night_Rate;
             return Driver_Over_NightRate;
         }
 
@@ -115,7 +118,7 @@ namespace carrental
         {
 
            
-            total_Long_hire_charge = Convert.ToInt32(extraKmCost() + DriverOverNightRate() + package_cost); 
+            total_Long_hire_charge = Convert.ToInt32(extraKmCost() + Driver_Over_NightRate + package_cost); 
             return total_Long_hire_charge;
         }
 

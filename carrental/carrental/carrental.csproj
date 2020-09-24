@@ -56,10 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Basecharge\BASICCHARGE_EDIT.cs">
+    <Compile Include="AddEdit\BASICCHARGE_EDIT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Basecharge\BASICCHARGE_EDIT.Designer.cs">
+    <Compile Include="AddEdit\BASICCHARGE_EDIT.Designer.cs">
       <DependentUpon>BASICCHARGE_EDIT.cs</DependentUpon>
     </Compile>
     <Compile Include="carreg.cs">
@@ -73,10 +73,10 @@
     <Compile Include="DataModel\Model.cs" />
     <Compile Include="DataModel\Packages.cs" />
     <Compile Include="DataModel\vehicle.cs" />
-    <Compile Include="DISTRIBUOR.cs">
+    <Compile Include="addeditDISTRIBUTOR\DISTRIBUOR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DISTRIBUOR.Designer.cs">
+    <Compile Include="addeditDISTRIBUTOR\DISTRIBUOR.Designer.cs">
       <DependentUpon>DISTRIBUOR.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202009221451464_test1.cs" />
@@ -113,17 +113,17 @@
     </Compile>
     <Compile Include="PackageSelector.cs" />
     <Compile Include="program.cs" />
-    <Compile Include="Vehicle\EDIT_VECHICLE.cs">
+    <Compile Include="AddEdit\EDIT_VECHICLE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vehicle\EDIT_VECHICLE.Designer.cs">
+    <Compile Include="AddEdit\EDIT_VECHICLE.Designer.cs">
       <DependentUpon>EDIT_VECHICLE.cs</DependentUpon>
     </Compile>
     <Compile Include="packages\Day_package.cs" />
-    <Compile Include="packages\PACKAGES_EDIT.cs">
+    <Compile Include="AddEdit\PACKAGES_EDIT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="packages\PACKAGES_EDIT.Designer.cs">
+    <Compile Include="AddEdit\PACKAGES_EDIT.Designer.cs">
       <DependentUpon>PACKAGES_EDIT.cs</DependentUpon>
     </Compile>
     <Compile Include="packages\LongHire.cs" />
@@ -152,8 +152,8 @@
       <DependentUpon>202009211656503_daypackages.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Rent.cs" />
-    <Compile Include="Hire\Hire.cs" />
+    <Compile Include="functions\Rent.cs" />
+    <Compile Include="functions\Hire.cs" />
     <Compile Include="customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,14 +173,14 @@
     <Compile Include="MainDisplay.Designer.cs">
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="emponly\emponly.cs">
+    <Compile Include="AddEdit\emponly.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="emponly\emponly.Designer.cs">
+    <Compile Include="AddEdit\emponly.Designer.cs">
       <DependentUpon>emponly.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehicle\Vechicle.cs" />
-    <EmbeddedResource Include="Basecharge\BASICCHARGE_EDIT.resx">
+    <EmbeddedResource Include="AddEdit\BASICCHARGE_EDIT.resx">
       <DependentUpon>BASICCHARGE_EDIT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="carreg.resx">
@@ -189,7 +189,7 @@
     <EmbeddedResource Include="customer.resx">
       <DependentUpon>customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DISTRIBUOR.resx">
+    <EmbeddedResource Include="addeditDISTRIBUTOR\DISTRIBUOR.resx">
       <DependentUpon>DISTRIBUOR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -219,7 +219,7 @@
     <EmbeddedResource Include="Migrations\202009221541065_removeingreadonly.resx">
       <DependentUpon>202009221541065_removeingreadonly.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="packages\PACKAGES_EDIT.resx">
+    <EmbeddedResource Include="AddEdit\PACKAGES_EDIT.resx">
       <DependentUpon>PACKAGES_EDIT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009201541227_vehicle.resx">
@@ -252,10 +252,10 @@
     <EmbeddedResource Include="MainDisplay.resx">
       <DependentUpon>MainDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="emponly\emponly.resx">
+    <EmbeddedResource Include="AddEdit\emponly.resx">
       <DependentUpon>emponly.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vehicle\EDIT_VECHICLE.resx">
+    <EmbeddedResource Include="AddEdit\EDIT_VECHICLE.resx">
       <DependentUpon>EDIT_VECHICLE.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -272,8 +272,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MainDisplay\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
